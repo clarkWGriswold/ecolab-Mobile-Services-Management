@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>false</admin_overrides>
+        <advanced>true</advanced>
+        <condition/>
+        <description/>
+        <name>x_elin_mobile_serv_eligibility_approval.active</name>
+        <operation display_value="write">write</operation>
+        <script><![CDATA[answer = true;]]></script>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 21:31:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>12efd447dbbeebc024e0d2e3ca9619cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_elin_mobile_serv_eligibility_approval.active</sys_name>
+        <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+        <sys_update_name>sys_security_acl_12efd447dbbeebc024e0d2e3ca9619cd</sys_update_name>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 21:31:33</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>

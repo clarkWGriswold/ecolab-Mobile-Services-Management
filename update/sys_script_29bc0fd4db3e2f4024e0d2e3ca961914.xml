@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_label/>
+        <action_name/>
+        <action_query>false</action_query>
+        <action_run_at>server</action_run_at>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <application/>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_elin_mobile_serv_eligibility</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_elin_mobile_serv_eligibility">e_level_resourceVALCHANGES^ORtime_oooVALCHANGES^ORoncallVALCHANGES^ORlandlineVALCHANGES^ORnone_of_the_aboveVALCHANGES^EQ<item endquery="false" field="e_level_resource" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="time_ooo" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="false" field="oncall" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="false" field="landline" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="false" field="none_of_the_above" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Sync Checkboxes</name>
+        <onclick/>
+        <order>200</order>
+        <priority>100</priority>
+        <read_access_action>false</read_access_action>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+	var eligApprvGR = new GlideRecord('x_elin_mobile_serv_eligibility_approval');
+	eligApprvGR.addQuery('approval_for', String(current.sys_id));
+	eligApprvGR.addQuery('active', true);
+	eligApprvGR.addQuery('state', '!=', 'cancelled');
+	eligApprvGR.query();
+
+	while (eligApprvGR.next()) {
+
+		eligApprvGR.time_ooo = current.time_ooo;
+		eligApprvGR.e_level_resource = current.e_level_resource;
+		eligApprvGR.oncall = current.oncall;
+		eligApprvGR.landline = current.landline;
+		eligApprvGR.none_of_the_above = current.none_of_the_above;
+		//eligApprvGR.setWorkflow(false);
+		//eligApprvGR.autoSysFields(false);
+		eligApprvGR.update();
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2018-12-31 21:21:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>29bc0fd4db3e2f4024e0d2e3ca961914</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Sync Checkboxes</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+        <sys_update_name>sys_script_29bc0fd4db3e2f4024e0d2e3ca961914</sys_update_name>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2018-12-31 21:21:59</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+</record_update>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="landline" label="Require communication where no landline exists?" language="en" table="x_elin_mobile_serv_eligibility">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>landline</element>
+            <help/>
+            <hint/>
+            <label>Require communication where no landline exists?</label>
+            <language>en</language>
+            <name>x_elin_mobile_serv_eligibility</name>
+            <plural>Require communication where no landline exists?</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2018-12-28 18:17:59</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>0a7a4fdbdb2e634024e0d2e3ca96199f</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>Require communication where no landline exists?</sys_name>
+            <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+            <sys_update_name>sys_documentation_x_elin_mobile_serv_eligibility_landline_en</sys_update_name>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2019-01-07 21:55:08</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

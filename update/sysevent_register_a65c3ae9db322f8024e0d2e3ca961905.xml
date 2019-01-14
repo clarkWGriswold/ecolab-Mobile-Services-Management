@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <description/>
+        <event_name>x_elin_mobile_serv.elig_appr.approve_all</event_name>
+        <fired_by>UI Action</fired_by>
+        <queue/>
+        <suffix>elig_appr.approve_all</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-04 17:02:38</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a65c3ae9db322f8024e0d2e3ca961905</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_elin_mobile_serv.elig_appr.approve_all</sys_name>
+        <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+        <sys_update_name>sysevent_register_a65c3ae9db322f8024e0d2e3ca961905</sys_update_name>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-04 17:02:38</sys_updated_on>
+        <table>x_elin_mobile_serv_eligibility</table>
+    </sysevent_register>
+</record_update>

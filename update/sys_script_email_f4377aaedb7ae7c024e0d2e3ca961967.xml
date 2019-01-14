@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>msm_getDevicesForApproval</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript( /* GlideRecord */ current, /* TemplatePrinter */ template,
+    /* Optional EmailOutbound */
+    email, /* Optional GlideRecord */ email_action,
+    /* Optional GlideRecord */
+    event) {
+
+    var msmeApprGR = new GlideRecord('x_elin_mobile_serv_eligibility_approval');
+    msmeApprGR.addQuery('approval_for', current.sys_id);
+    msmeApprGR.addQuery('state', 'requested');
+    msmeApprGR.addQuery('active', true);
+    msmeApprGR.orderBy('number');
+    msmeApprGR.query();
+
+    while (msmeApprGR.next()) {
+
+        template.print(msmeApprGR.device.getDisplayValue() + ' and Services: <a href="mailto:' + gs.getProperty('glide.pop3.user') + '@service-now.com?subject=RE: ' + msmeApprGR.approval_for.number + ' | ' + msmeApprGR.number + ' | ' + msmeApprGR.device.getDisplayValue() + ' | APPROVE&body=Ref:{WATERMARK}"> Click to Approve </a> -- OR -- <a href="mailto:' + gs.getProperty('glide.pop3.user') + '@service-now.com?subject=RE: ' + requestedDevices.approval_for.number + ' | ' + msmeApprGR.number + ' | ' + msmeApprGR.device.getDisplayValue() + ' | REJECT&body=Ref:{WATERMARK}"> Click to Reject </a><br>');
+
+    }
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-07 19:24:46</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f4377aaedb7ae7c024e0d2e3ca961967</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>msm_getDevicesForApproval</sys_name>
+        <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+        <sys_update_name>sys_script_email_f4377aaedb7ae7c024e0d2e3ca961967</sys_update_name>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-07 19:24:46</sys_updated_on>
+    </sys_script_email>
+</record_update>

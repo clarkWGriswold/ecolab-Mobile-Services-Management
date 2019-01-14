@@ -1,0 +1,2618 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
+    <wf_workflow_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_stages>{"stages":{},"ends":["1860888fdbf6ebc024e0d2e3ca9619e5"],"subflows":[],"activities":{}}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
+        <condition table="x_elin_mobile_serv_eligibility">phone_approval=requested^ORmifi_approval=requested^ORtablet_approval=requested^EQ<item endquery="false" field="phone_approval" goto="false" newquery="false" operator="=" or="false" value="requested"/>
+            <item endquery="false" field="mifi_approval" goto="false" newquery="false" operator="=" or="true" value="requested"/>
+            <item endquery="false" field="tablet_approval" goto="false" newquery="false" operator="=" or="true" value="requested"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <condition_type>run_match</condition_type>
+        <description/>
+        <expected_sequences>1460c403db3aebc024e0d2e3ca96199f,2460c403db3aebc024e0d2e3ca9619a7,d860888fdbf6ebc024e0d2e3ca9619e4,a860c403db3aebc024e0d2e3ca9619a4,1460888fdbf6ebc024e0d2e3ca9619e2,d060c403db3aebc024e0d2e3ca9619a0,1860c403db3aebc024e0d2e3ca9619a2,a060c403db3aebc024e0d2e3ca9619a8,d460c403db3aebc024e0d2e3ca9619a1,dc60888fdbf6ebc024e0d2e3ca9619e0,1060888fdbf6ebc024e0d2e3ca9619e6,1860888fdbf6ebc024e0d2e3ca9619e5</expected_sequences>
+        <expected_time>1970-01-01 14:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>1460c403db3aebc024e0d2e3ca96199f,2460c403db3aebc024e0d2e3ca9619a7,d860888fdbf6ebc024e0d2e3ca9619e4,a860c403db3aebc024e0d2e3ca9619a4,1460888fdbf6ebc024e0d2e3ca9619e2,5060c403db3aebc024e0d2e3ca96199e,d060c403db3aebc024e0d2e3ca9619a0,2060c403db3aebc024e0d2e3ca9619a6,1860c403db3aebc024e0d2e3ca9619a2,a060c403db3aebc024e0d2e3ca9619a8,d460c403db3aebc024e0d2e3ca9619a1,dc60888fdbf6ebc024e0d2e3ca9619e0,1060888fdbf6ebc024e0d2e3ca9619e6,1860888fdbf6ebc024e0d2e3ca9619e5</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Mobile Services - Eligibility</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration/>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field/>
+        <stage_order>computed</stage_order>
+        <start display_value="Begin">1460c403db3aebc024e0d2e3ca96199f</start>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5060888fdbf6ebc024e0d2e3ca9619df</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>LDAP_Integration</sys_updated_by>
+        <sys_updated_on>2019-01-09 09:39:51</sys_updated_on>
+        <table>x_elin_mobile_serv_eligibility</table>
+        <timezone/>
+        <validated>true</validated>
+        <workflow display_value="Mobile Services - Eligibility">efce32e5db722f8024e0d2e3ca9619d3</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <description/>
+        <name>Mobile Services - Eligibility</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-04 17:13:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>efce32e5db722f8024e0d2e3ca9619d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Mobile Services - Eligibility</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+        <sys_update_name>wf_workflow_efce32e5db722f8024e0d2e3ca9619d3</sys_update_name>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-04 17:13:21</sys_updated_on>
+        <table>x_elin_mobile_serv_eligibility</table>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Join">7c9a2ba9c0a801650021ada408de0ebd</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>14</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>All Approvals Are Complete</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>dc60888fdbf6ebc024e0d2e3ca9619e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>826</x>
+        <y>419</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=dc60888fdbf6ebc024e0d2e3ca9619e0"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="All Approvals Are Complete">dc60888fdbf6ebc024e0d2e3ca9619e0</activity>
+        <condition>activity.result == 'complete'</condition>
+        <condition_default display_value="Complete">6dd6ac3e0a6a803f16b5e594347ea01c</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Complete</name>
+        <order>1</order>
+        <short_description>All predecessor activities have transitioned to this activity</short_description>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>d860888fdbf6ebc024e0d2e3ca9619e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="All Approvals Are Complete">dc60888fdbf6ebc024e0d2e3ca9619e0</activity>
+        <condition>activity.result == 'incomplete'</condition>
+        <condition_default display_value="Incomplete">6dd49ad30a6a803f03a5a18c4085b1c7</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Incomplete</name>
+        <order>2</order>
+        <short_description>At least one predecessor activities did not transition to this activity</short_description>
+        <skip_during_generate>true</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5860888fdbf6ebc024e0d2e3ca9619e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="If">98f621ca0a0a0b5900f7c291f5e45a0e</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>7</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Are End User E-mails Suppressed?</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1460888fdbf6ebc024e0d2e3ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>267</x>
+        <y>460</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=1460888fdbf6ebc024e0d2e3ca9619e2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1460888fdbf6ebc024e0d2e3ca9619e2</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1c60888fdbf6ebc024e0d2e3ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>// This script needs to set answer to 'yes' or 'no' to indicate the state of the activity.&#13;
+//&#13;
+// For example,&#13;
+//&#13;
+//   answer = ifScript();&#13;
+//&#13;
+//   function ifScript() {&#13;
+//      if (condition is true) {&#13;
+//         return 'yes';&#13;
+//      }&#13;
+//      return 'no';&#13;
+//   }&#13;
+</value>
+        <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1460888fdbf6ebc024e0d2e3ca9619e2</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5860888fdbf6ebc024e0d2e3ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>0</value>
+        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1460888fdbf6ebc024e0d2e3ca9619e2</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>9460888fdbf6ebc024e0d2e3ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>suppress_end_user_email=true^EQ</value>
+        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1460888fdbf6ebc024e0d2e3ca9619e2</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>9460888fdbf6ebc024e0d2e3ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>suppress_end_user_email=true^EQ</value>
+        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1460888fdbf6ebc024e0d2e3ca9619e2</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5860888fdbf6ebc024e0d2e3ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>0</value>
+        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1460888fdbf6ebc024e0d2e3ca9619e2</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1c60888fdbf6ebc024e0d2e3ca9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>// This script needs to set answer to 'yes' or 'no' to indicate the state of the activity.&#13;
+//&#13;
+// For example,&#13;
+//&#13;
+//   answer = ifScript();&#13;
+//&#13;
+//   function ifScript() {&#13;
+//      if (condition is true) {&#13;
+//         return 'yes';&#13;
+//      }&#13;
+//      return 'no';&#13;
+//   }&#13;
+</value>
+        <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Are End User E-mails Suppressed?">1460888fdbf6ebc024e0d2e3ca9619e2</activity>
+        <condition>activity.result == 'no'</condition>
+        <condition_default display_value="No">c1eff6430a0a0b59000f955abe842c94</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>No</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>true</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>d060888fdbf6ebc024e0d2e3ca9619e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Are End User E-mails Suppressed?">1460888fdbf6ebc024e0d2e3ca9619e2</activity>
+        <condition>activity.result == 'yes'</condition>
+        <condition_default display_value="Yes">c1ef63200a0a0b59005ef89bae78feb7</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Yes</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5060888fdbf6ebc024e0d2e3ca9619e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1460c403db3aebc024e0d2e3ca96199f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>20</x>
+        <y>20</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=1460c403db3aebc024e0d2e3ca96199f"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Begin">1460c403db3aebc024e0d2e3ca96199f</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1c60c403db3aebc024e0d2e3ca96199f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1860888fdbf6ebc024e0d2e3ca9619e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>1024</x>
+        <y>621</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=1860888fdbf6ebc024e0d2e3ca9619e5"/>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="If">98f621ca0a0a0b5900f7c291f5e45a0e</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>5</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Is the Approval E-mail Suppressed?</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>a860c403db3aebc024e0d2e3ca9619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>100</x>
+        <y>265</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=a860c403db3aebc024e0d2e3ca9619a4"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>a860c403db3aebc024e0d2e3ca9619a4</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>2c60c403db3aebc024e0d2e3ca9619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>suppress_approval_email=true^EQ</value>
+        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>a860c403db3aebc024e0d2e3ca9619a4</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>a060c403db3aebc024e0d2e3ca9619a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>// This script needs to set answer to 'yes' or 'no' to indicate the state of the activity.&#13;
+//&#13;
+// For example,&#13;
+//&#13;
+//   answer = ifScript();&#13;
+//&#13;
+//   function ifScript() {&#13;
+//      if (condition is true) {&#13;
+//         return 'yes';&#13;
+//      }&#13;
+//      return 'no';&#13;
+//   }&#13;
+</value>
+        <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>a860c403db3aebc024e0d2e3ca9619a4</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>ec60c403db3aebc024e0d2e3ca9619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>0</value>
+        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>a860c403db3aebc024e0d2e3ca9619a4</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>2c60c403db3aebc024e0d2e3ca9619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>suppress_approval_email=true^EQ</value>
+        <variable display_value="">493cba6a0a6a803f07df24b118473551</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>a860c403db3aebc024e0d2e3ca9619a4</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>ec60c403db3aebc024e0d2e3ca9619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>0</value>
+        <variable display_value="">493d2c1d0a6a803f3217a75738ea3289</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>a860c403db3aebc024e0d2e3ca9619a4</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>a060c403db3aebc024e0d2e3ca9619a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>// This script needs to set answer to 'yes' or 'no' to indicate the state of the activity.&#13;
+//&#13;
+// For example,&#13;
+//&#13;
+//   answer = ifScript();&#13;
+//&#13;
+//   function ifScript() {&#13;
+//      if (condition is true) {&#13;
+//         return 'yes';&#13;
+//      }&#13;
+//      return 'no';&#13;
+//   }&#13;
+</value>
+        <variable display_value="">c35e50810a0a0ba96248a709b450fc32</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Is the Approval E-mail Suppressed?">a860c403db3aebc024e0d2e3ca9619a4</activity>
+        <condition>activity.result == 'no'</condition>
+        <condition_default display_value="No">c1eff6430a0a0b59000f955abe842c94</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>No</name>
+        <order>200</order>
+        <short_description/>
+        <skip_during_generate>true</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>6860c403db3aebc024e0d2e3ca9619a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Is the Approval E-mail Suppressed?">a860c403db3aebc024e0d2e3ca9619a4</activity>
+        <condition>activity.result == 'yes'</condition>
+        <condition_default display_value="Yes">c1ef63200a0a0b59005ef89bae78feb7</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Yes</name>
+        <order>100</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>e460c403db3aebc024e0d2e3ca9619a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Create Event">9f680b92c0a801640026553f665b429f</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>8</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Reconcile Flags</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>d060c403db3aebc024e0d2e3ca9619a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>430</x>
+        <y>349</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=d060c403db3aebc024e0d2e3ca9619a0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d060c403db3aebc024e0d2e3ca9619a0</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1860c403db3aebc024e0d2e3ca9619a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	// return the value to use for Parameter 1&#13;
+	return current.number;&#13;
+}());</value>
+        <variable display_value="">c35dd0310a0a0ba96248a70936d276b3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d060c403db3aebc024e0d2e3ca9619a0</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5460c403db3aebc024e0d2e3ca9619a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>f4bb6a66dbf6e7c024e0d2e3ca961950</value>
+        <variable display_value="">c35dcc7a0a0a0ba96248a70926fa68b5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d060c403db3aebc024e0d2e3ca9619a0</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>d860c403db3aebc024e0d2e3ca9619a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	// return the value to use for Parameter 2&#13;
+	return current.requested_for;&#13;
+}());</value>
+        <variable display_value="">c35dd3ef0a0a0ba96248a70947e35325</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d060c403db3aebc024e0d2e3ca9619a0</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5460c403db3aebc024e0d2e3ca9619a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>f4bb6a66dbf6e7c024e0d2e3ca961950</value>
+        <variable display_value="">c35dcc7a0a0a0ba96248a70926fa68b5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d060c403db3aebc024e0d2e3ca9619a0</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1860c403db3aebc024e0d2e3ca9619a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	// return the value to use for Parameter 1&#13;
+	return current.number;&#13;
+}());</value>
+        <variable display_value="">c35dd0310a0a0ba96248a70936d276b3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d060c403db3aebc024e0d2e3ca9619a0</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>d860c403db3aebc024e0d2e3ca9619a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	// return the value to use for Parameter 2&#13;
+	return current.requested_for;&#13;
+}());</value>
+        <variable display_value="">c35dd3ef0a0a0ba96248a70947e35325</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Reconcile Flags">d060c403db3aebc024e0d2e3ca9619a0</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1060c403db3aebc024e0d2e3ca9619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>3</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Reset Eligibility Approvals</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>2460c403db3aebc024e0d2e3ca9619a7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:13:36</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>54</x>
+        <y>114</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=2460c403db3aebc024e0d2e3ca9619a7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2460c403db3aebc024e0d2e3ca9619a7</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>a460c403db3aebc024e0d2e3ca9619a7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:13:36</sys_updated_on>
+        <value>// cancel existing approvals&#13;
+var msmeApprGR = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+msmeApprGR.addQuery('approval_for', String(current.sys_id));&#13;
+msmeApprGR.addQuery('active', true);&#13;
+msmeApprGR.query();&#13;
+&#13;
+while (msmeApprGR.next()) {&#13;
+&#13;
+	msmeApprGR.state = 'cancelled';&#13;
+	msmeApprGR.active = false;&#13;
+	msmeApprGR.autoSysFields(false);&#13;
+	msmeApprGR.update();&#13;
+}&#13;
+&#13;
+// create phone approval&#13;
+var phoneMsmeApprGR = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+phoneMsmeApprGR.initialize();&#13;
+phoneMsmeApprGR.active = true;&#13;
+phoneMsmeApprGR.approver = current.manager;&#13;
+phoneMsmeApprGR.device = 'phone';&#13;
+phoneMsmeApprGR.state = current.phone_approval;&#13;
+phoneMsmeApprGR.approval_for = current.sys_id;&#13;
+phoneMsmeApprGR.time_ooo = current.time_ooo;&#13;
+phoneMsmeApprGR.landline = current.landline;&#13;
+phoneMsmeApprGR.e_level_resource = current.e_level_resource;&#13;
+phoneMsmeApprGR.oncall = current.oncall;&#13;
+phoneMsmeApprGR.insert();&#13;
+&#13;
+// create mifi approval&#13;
+var mifiMsmeApprGR = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+mifiMsmeApprGR.initialize();&#13;
+mifiMsmeApprGR.active = true;&#13;
+mifiMsmeApprGR.approver = current.manager;&#13;
+mifiMsmeApprGR.device = 'mifi';&#13;
+mifiMsmeApprGR.state = current.mifi_approval;&#13;
+mifiMsmeApprGR.approval_for = current.sys_id;&#13;
+mifiMsmeApprGR.time_ooo = current.time_ooo;&#13;
+mifiMsmeApprGR.landline = current.landline;&#13;
+mifiMsmeApprGR.e_level_resource = current.e_level_resource;&#13;
+mifiMsmeApprGR.oncall = current.oncall;&#13;
+mifiMsmeApprGR.insert();&#13;
+&#13;
+// create tablet approval&#13;
+var tabletMsmeApprGR = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+tabletMsmeApprGR.initialize();&#13;
+tabletMsmeApprGR.active = true;&#13;
+tabletMsmeApprGR.approver = current.manager;&#13;
+tabletMsmeApprGR.device = 'tablet';&#13;
+tabletMsmeApprGR.state = current.tablet_approval;&#13;
+tabletMsmeApprGR.approval_for = current.sys_id;&#13;
+tabletMsmeApprGR.time_ooo = current.time_ooo;&#13;
+tabletMsmeApprGR.landline = current.landline;&#13;
+tabletMsmeApprGR.e_level_resource = current.e_level_resource;&#13;
+tabletMsmeApprGR.oncall = current.oncall;&#13;
+tabletMsmeApprGR.insert();&#13;
+&#13;
+// create wwan approval&#13;
+var wwanMsmeApprGR = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+wwanMsmeApprGR.initialize();&#13;
+wwanMsmeApprGR.active = true;&#13;
+wwanMsmeApprGR.approver = current.manager;&#13;
+wwanMsmeApprGR.device = 'wwan';&#13;
+wwanMsmeApprGR.state = current.wwan_sim_approval;&#13;
+wwanMsmeApprGR.approval_for = current.sys_id;&#13;
+wwanMsmeApprGR.time_ooo = current.time_ooo;&#13;
+wwanMsmeApprGR.landline = current.landline;&#13;
+wwanMsmeApprGR.e_level_resource = current.e_level_resource;&#13;
+wwanMsmeApprGR.oncall = current.oncall;&#13;
+//wwanMsmeApprGR.insert();&#13;
+&#13;
+// create wearables approval&#13;
+var wearMsmeApprGR = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+wearMsmeApprGR.initialize();&#13;
+wearMsmeApprGR.active = true;&#13;
+wearMsmeApprGR.approver = current.manager;&#13;
+wearMsmeApprGR.device = 'wearable';&#13;
+wearMsmeApprGR.state = current.wearable_approval;&#13;
+wearMsmeApprGR.approval_for = current.sys_id;&#13;
+wearMsmeApprGR.time_ooo = current.time_ooo;&#13;
+wearMsmeApprGR.landline = current.landline;&#13;
+wearMsmeApprGR.e_level_resource = current.e_level_resource;&#13;
+wearMsmeApprGR.oncall = current.oncall;&#13;
+//wearMsmeApprGR.insert();</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2460c403db3aebc024e0d2e3ca9619a7</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>a460c403db3aebc024e0d2e3ca9619a7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:13:36</sys_updated_on>
+        <value>// cancel existing approvals&#13;
+var msmeApprGR = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+msmeApprGR.addQuery('approval_for', String(current.sys_id));&#13;
+msmeApprGR.addQuery('active', true);&#13;
+msmeApprGR.query();&#13;
+&#13;
+while (msmeApprGR.next()) {&#13;
+&#13;
+	msmeApprGR.state = 'cancelled';&#13;
+	msmeApprGR.active = false;&#13;
+	msmeApprGR.autoSysFields(false);&#13;
+	msmeApprGR.update();&#13;
+}&#13;
+&#13;
+// create phone approval&#13;
+var phoneMsmeApprGR = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+phoneMsmeApprGR.initialize();&#13;
+phoneMsmeApprGR.active = true;&#13;
+phoneMsmeApprGR.approver = current.manager;&#13;
+phoneMsmeApprGR.device = 'phone';&#13;
+phoneMsmeApprGR.state = current.phone_approval;&#13;
+phoneMsmeApprGR.approval_for = current.sys_id;&#13;
+phoneMsmeApprGR.time_ooo = current.time_ooo;&#13;
+phoneMsmeApprGR.landline = current.landline;&#13;
+phoneMsmeApprGR.e_level_resource = current.e_level_resource;&#13;
+phoneMsmeApprGR.oncall = current.oncall;&#13;
+phoneMsmeApprGR.insert();&#13;
+&#13;
+// create mifi approval&#13;
+var mifiMsmeApprGR = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+mifiMsmeApprGR.initialize();&#13;
+mifiMsmeApprGR.active = true;&#13;
+mifiMsmeApprGR.approver = current.manager;&#13;
+mifiMsmeApprGR.device = 'mifi';&#13;
+mifiMsmeApprGR.state = current.mifi_approval;&#13;
+mifiMsmeApprGR.approval_for = current.sys_id;&#13;
+mifiMsmeApprGR.time_ooo = current.time_ooo;&#13;
+mifiMsmeApprGR.landline = current.landline;&#13;
+mifiMsmeApprGR.e_level_resource = current.e_level_resource;&#13;
+mifiMsmeApprGR.oncall = current.oncall;&#13;
+mifiMsmeApprGR.insert();&#13;
+&#13;
+// create tablet approval&#13;
+var tabletMsmeApprGR = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+tabletMsmeApprGR.initialize();&#13;
+tabletMsmeApprGR.active = true;&#13;
+tabletMsmeApprGR.approver = current.manager;&#13;
+tabletMsmeApprGR.device = 'tablet';&#13;
+tabletMsmeApprGR.state = current.tablet_approval;&#13;
+tabletMsmeApprGR.approval_for = current.sys_id;&#13;
+tabletMsmeApprGR.time_ooo = current.time_ooo;&#13;
+tabletMsmeApprGR.landline = current.landline;&#13;
+tabletMsmeApprGR.e_level_resource = current.e_level_resource;&#13;
+tabletMsmeApprGR.oncall = current.oncall;&#13;
+tabletMsmeApprGR.insert();&#13;
+&#13;
+// create wwan approval&#13;
+var wwanMsmeApprGR = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+wwanMsmeApprGR.initialize();&#13;
+wwanMsmeApprGR.active = true;&#13;
+wwanMsmeApprGR.approver = current.manager;&#13;
+wwanMsmeApprGR.device = 'wwan';&#13;
+wwanMsmeApprGR.state = current.wwan_sim_approval;&#13;
+wwanMsmeApprGR.approval_for = current.sys_id;&#13;
+wwanMsmeApprGR.time_ooo = current.time_ooo;&#13;
+wwanMsmeApprGR.landline = current.landline;&#13;
+wwanMsmeApprGR.e_level_resource = current.e_level_resource;&#13;
+wwanMsmeApprGR.oncall = current.oncall;&#13;
+//wwanMsmeApprGR.insert();&#13;
+&#13;
+// create wearables approval&#13;
+var wearMsmeApprGR = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+wearMsmeApprGR.initialize();&#13;
+wearMsmeApprGR.active = true;&#13;
+wearMsmeApprGR.approver = current.manager;&#13;
+wearMsmeApprGR.device = 'wearable';&#13;
+wearMsmeApprGR.state = current.wearable_approval;&#13;
+wearMsmeApprGR.approval_for = current.sys_id;&#13;
+wearMsmeApprGR.time_ooo = current.time_ooo;&#13;
+wearMsmeApprGR.landline = current.landline;&#13;
+wearMsmeApprGR.e_level_resource = current.e_level_resource;&#13;
+wearMsmeApprGR.oncall = current.oncall;&#13;
+//wearMsmeApprGR.insert();</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Reset Eligibility Approvals">2460c403db3aebc024e0d2e3ca9619a7</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>e860c403db3aebc024e0d2e3ca9619a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Create Event">9f680b92c0a801640026553f665b429f</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>15</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Send E-mail - Employee - Eligibility Requested</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>2060c403db3aebc024e0d2e3ca9619a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>312</x>
+        <y>567</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=2060c403db3aebc024e0d2e3ca9619a6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2060c403db3aebc024e0d2e3ca9619a6</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>2860c403db3aebc024e0d2e3ca9619a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	// return the value to use for Parameter 2&#13;
+	return "";&#13;
+}());</value>
+        <variable display_value="">c35dd3ef0a0a0ba96248a70947e35325</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2060c403db3aebc024e0d2e3ca9619a6</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>6460c403db3aebc024e0d2e3ca9619a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	// return the value to use for Parameter 1&#13;
+	return current.requested_for;&#13;
+}());</value>
+        <variable display_value="">c35dd0310a0a0ba96248a70936d276b3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2060c403db3aebc024e0d2e3ca9619a6</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>a060c403db3aebc024e0d2e3ca9619a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>31507266db3ae7c024e0d2e3ca961927</value>
+        <variable display_value="">c35dcc7a0a0a0ba96248a70926fa68b5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2060c403db3aebc024e0d2e3ca9619a6</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>a060c403db3aebc024e0d2e3ca9619a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>31507266db3ae7c024e0d2e3ca961927</value>
+        <variable display_value="">c35dcc7a0a0a0ba96248a70926fa68b5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2060c403db3aebc024e0d2e3ca9619a6</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>6460c403db3aebc024e0d2e3ca9619a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	// return the value to use for Parameter 1&#13;
+	return current.requested_for;&#13;
+}());</value>
+        <variable display_value="">c35dd0310a0a0ba96248a70936d276b3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2060c403db3aebc024e0d2e3ca9619a6</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>2860c403db3aebc024e0d2e3ca9619a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	// return the value to use for Parameter 2&#13;
+	return "";&#13;
+}());</value>
+        <variable display_value="">c35dd3ef0a0a0ba96248a70947e35325</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Send E-mail - Employee - Eligibility Requested">2060c403db3aebc024e0d2e3ca9619a6</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>6c60c403db3aebc024e0d2e3ca9619a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Create Event">9f680b92c0a801640026553f665b429f</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>6</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Send E-mail - Manager - Eligibility Requested</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5060c403db3aebc024e0d2e3ca96199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>146</x>
+        <y>373</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=5060c403db3aebc024e0d2e3ca96199e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>5060c403db3aebc024e0d2e3ca96199e</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5860c403db3aebc024e0d2e3ca96199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	// return the value to use for Parameter 2&#13;
+	return "";&#13;
+}());</value>
+        <variable display_value="">c35dd3ef0a0a0ba96248a70947e35325</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>5060c403db3aebc024e0d2e3ca96199e</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>9460c403db3aebc024e0d2e3ca96199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	return current.u_manager;&#13;
+}());</value>
+        <variable display_value="">c35dd0310a0a0ba96248a70936d276b3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>5060c403db3aebc024e0d2e3ca96199e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>d060c403db3aebc024e0d2e3ca96199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>d697f265db322f8024e0d2e3ca9619b5</value>
+        <variable display_value="">c35dcc7a0a0a0ba96248a70926fa68b5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>5060c403db3aebc024e0d2e3ca96199e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>d060c403db3aebc024e0d2e3ca96199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>d697f265db322f8024e0d2e3ca9619b5</value>
+        <variable display_value="">c35dcc7a0a0a0ba96248a70926fa68b5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>5060c403db3aebc024e0d2e3ca96199e</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>9460c403db3aebc024e0d2e3ca96199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	return current.u_manager;&#13;
+}());</value>
+        <variable display_value="">c35dd0310a0a0ba96248a70936d276b3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>5060c403db3aebc024e0d2e3ca96199e</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5860c403db3aebc024e0d2e3ca96199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	// return the value to use for Parameter 2&#13;
+	return "";&#13;
+}());</value>
+        <variable display_value="">c35dd3ef0a0a0ba96248a70947e35325</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Send E-mail - Manager - Eligibility Requested">5060c403db3aebc024e0d2e3ca96199e</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>9c60c403db3aebc024e0d2e3ca96199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Create Event">9f680b92c0a801640026553f665b429f</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>16</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Send user email if not suppressed</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1060888fdbf6ebc024e0d2e3ca9619e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>875</x>
+        <y>515</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=1060888fdbf6ebc024e0d2e3ca9619e6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1060888fdbf6ebc024e0d2e3ca9619e6</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1460888fdbf6ebc024e0d2e3ca9619e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>2332f2eedb3ae7c024e0d2e3ca9619df</value>
+        <variable display_value="">c35dcc7a0a0a0ba96248a70926fa68b5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1060888fdbf6ebc024e0d2e3ca9619e6</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>9860888fdbf6ebc024e0d2e3ca9619e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	// return the value to use for Parameter 2&#13;
+	return current.requested_for.user_name;&#13;
+}());</value>
+        <variable display_value="">c35dd3ef0a0a0ba96248a70947e35325</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1060888fdbf6ebc024e0d2e3ca9619e6</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>d460888fdbf6ebc024e0d2e3ca9619e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	// return the value to use for Parameter 1&#13;
+	return current.number;&#13;
+}());</value>
+        <variable display_value="">c35dd0310a0a0ba96248a70936d276b3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1060888fdbf6ebc024e0d2e3ca9619e6</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1460888fdbf6ebc024e0d2e3ca9619e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>2332f2eedb3ae7c024e0d2e3ca9619df</value>
+        <variable display_value="">c35dcc7a0a0a0ba96248a70926fa68b5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1060888fdbf6ebc024e0d2e3ca9619e6</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>d460888fdbf6ebc024e0d2e3ca9619e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	// return the value to use for Parameter 1&#13;
+	return current.number;&#13;
+}());</value>
+        <variable display_value="">c35dd0310a0a0ba96248a70936d276b3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1060888fdbf6ebc024e0d2e3ca9619e6</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>9860888fdbf6ebc024e0d2e3ca9619e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>(function() {&#13;
+	// return the value to use for Parameter 2&#13;
+	return current.requested_for.user_name;&#13;
+}());</value>
+        <variable display_value="">c35dd3ef0a0a0ba96248a70947e35325</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Send user email if not suppressed">1060888fdbf6ebc024e0d2e3ca9619e6</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>9860c403db3aebc024e0d2e3ca96199d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>4</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Special User Handling</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>d860888fdbf6ebc024e0d2e3ca9619e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>53</x>
+        <y>186</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=d860888fdbf6ebc024e0d2e3ca9619e4"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d860888fdbf6ebc024e0d2e3ca9619e4</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5c60888fdbf6ebc024e0d2e3ca9619e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>checkIfSpecial();&#13;
+&#13;
+function checkIfSpecial() {&#13;
+&#13;
+    var logTxt = '*** Eligibility Check Workflow ***\n';&#13;
+&#13;
+    var myDivision = current.requested_for.u_division.u_name.toString().toLowerCase();&#13;
+    var myTitle = current.requested_for.title.toString().toLowerCase();&#13;
+&#13;
+    logTxt += '\nmyDivision: ' + myDivision + '\nmyTitle: ' + myTitle;&#13;
+&#13;
+    if (myDivision.indexOf('institutional na') &gt; -1 ||&#13;
+        myDivision.indexOf('inst institutional division') &gt; -1) {&#13;
+&#13;
+        logTxt += '\ncalling goForMiFi';&#13;
+        goForMiFi();&#13;
+    }&#13;
+&#13;
+    logTxt += '\nindex of pest: ' + myDivision.indexOf('pest');&#13;
+&#13;
+    //************************&#13;
+    // Adding these lines of code as per FRU0058744&#13;
+    if (myDivision.indexOf('pest') &gt; -1 ||&#13;
+        myDivision.indexOf('qsr') &gt; -1 ||&#13;
+        myDivision.indexOf('kay') &gt; -1 ||&#13;
+        myDivision.indexOf('quick service') &gt; -1 ||&#13;
+        myDivision.indexOf('food retail') &gt; -1 ||&#13;
+        myDivision.indexOf('equipment care') &gt; -1 ||&#13;
+        myDivision.indexOf('gcs') &gt; -1 ||&#13;
+        myDivision.indexOf('eec') &gt; -1 ||&#13;
+        myDivision.indexOf('smart care') &gt; -1) {&#13;
+&#13;
+        logTxt += '\ncalling noneOfTheAbove';&#13;
+        noneOfTheAbove();&#13;
+    }&#13;
+&#13;
+    //gs.log(logTxt, 'Eligibility Check Workflow');&#13;
+&#13;
+&#13;
+    //****************************&#13;
+&#13;
+    /*&#13;
+ 	************************&#13;
+	// Commenting these lines of code as per FRU0058744&#13;
+	&#13;
+	if (myDivision.indexOf('pest elim') &gt; -1) {&#13;
+		&#13;
+		// Swapped for new titles as of FRU0042675&#13;
+		//if (myTitle.indexOf('training manager') &gt; -1 || myTitle.indexOf('training representative') &gt; -1 || myTitle.indexOf('training specialist') &gt; -1 || myTitle.indexOf('program specialist') &gt; -1 || myTitle.indexOf('select segment specialist') &gt; -1 || myTitle.indexOf('select segment specialist sco') &gt; -1 || myTitle.indexOf('service specialist') &gt; -1 || myTitle.indexOf('service specialist ca') &gt; -1 || myTitle.indexOf('service specialist sco') &gt; -1 || myTitle.indexOf('service specialist trainee') &gt; -1 || myTitle.indexOf('service specialist trainee ca') &gt; -1 || myTitle.indexOf('sr service specialist') &gt; -1 || myTitle.indexOf('sr service specialist ca') &gt; -1 || myTitle.indexOf('sr service specialist sco') &gt; -1 || myTitle.indexOf('utility service specialist') &gt; -1 || myTitle.indexOf('utility service specialist ca') &gt; -1 || myTitle.indexOf('remote coverage specialist') &gt; -1) {&#13;
+			&#13;
+			// // New Pest titles as of FRU0042675&#13;
+			if (myTitle.indexOf('sr service specialist') &gt; -1 ||&#13;
+				myTitle.indexOf('sr service specialist') &gt; -1 ||&#13;
+			myTitle.indexOf('utility service specialist') &gt; -1 ||&#13;
+			myTitle.indexOf('senior service specialist') &gt; -1 ||&#13;
+			myTitle.indexOf('service specialist') &gt; -1 ||&#13;
+			myTitle.indexOf('service specialist trainee') &gt; -1 ||&#13;
+			myTitle.indexOf('service specialist') &gt; -1 ||&#13;
+			myTitle.indexOf('service specialist trainee.') &gt; -1 ||&#13;
+			myTitle.indexOf('utility service specialist.') &gt; -1) {&#13;
+				&#13;
+				noneOfTheAbove();&#13;
+				&#13;
+			}&#13;
+		}&#13;
+		&#13;
+		if (myDivision.indexOf('equipment care') &gt; -1 || myDivision.indexOf('eec') &gt; -1 ||&#13;
+			myDivision.indexOf('smart care') &gt; -1) {&#13;
+			&#13;
+			if (myTitle.indexOf('assoc territory service spec') &gt; -1 ||&#13;
+				myTitle.indexOf('service technician equip care') &gt; -1 ||&#13;
+			myTitle.indexOf('master service tech equip care') &gt; -1 ||&#13;
+			myTitle.indexOf('assoc service tech equip care') &gt; -1 ||&#13;
+			myTitle.indexOf('master service tech ii') &gt; -1 ||&#13;
+			myTitle.indexOf('lead service tech equip care') &gt; -1) {&#13;
+				&#13;
+				noneOfTheAbove();&#13;
+			}&#13;
+			&#13;
+		}&#13;
+ 		******************************&#13;
+ 		*/&#13;
+}&#13;
+&#13;
+&#13;
+function goForMiFi() {&#13;
+&#13;
+    current.mifi_approval = 'approved';&#13;
+    current.tablet_approval = 'rejected';&#13;
+    current.work_notes = 'User falls within Special User Eligibility Rules - MiFi Device Approved\n';&#13;
+    current.work_notes += 'As the user has been approved for a MiFi Device, the approval for an iPad has been automatically rejected for an iPad as per policy.';&#13;
+&#13;
+&#13;
+    var mifiApproval = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+    mifiApproval.addQuery('approval_for', current.sys_id);&#13;
+    mifiApproval.addQuery('device', 'mifi');&#13;
+    mifiApproval.addQuery('state', 'requested');&#13;
+    mifiApproval.addQuery('active', true);&#13;
+    mifiApproval.query();&#13;
+&#13;
+    while (mifiApproval.next()) {&#13;
+&#13;
+        mifiApproval.comments = 'User falls within Special User Eligibility Rules - MiFi Device Approved';&#13;
+        mifiApproval.state = 'approved';&#13;
+        mifiApproval.update();&#13;
+    }&#13;
+&#13;
+    var ipadApproval = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+    ipadApproval.addQuery('approval_for', current.sys_id);&#13;
+    ipadApproval.addQuery('device', 'tablet');&#13;
+    ipadApproval.addQuery('state', 'requested');&#13;
+    ipadApproval.addQuery('active', true);&#13;
+    ipadApproval.query();&#13;
+&#13;
+    while (ipadApproval.next()) {&#13;
+&#13;
+        ipadApproval.comments = 'As the user has been approved for a MiFi Device, the approval for an iPad has been automatically rejected for an iPad as per policy.';&#13;
+        ipadApproval.state = 'rejected';&#13;
+        ipadApproval.update();&#13;
+    }&#13;
+}&#13;
+&#13;
+function noneOfTheAbove() {&#13;
+&#13;
+    var notaLogTxt = '*** Eligibility Check Workflow: noneOfTheAbove **\n';&#13;
+    notaLogTxt += '\nBEFORE';&#13;
+    notaLogTxt += '\ncurrent.suppress_approval_email: ' + current.suppress_approval_email;&#13;
+    notaLogTxt += '\nsuppress_end_user_email: ' + suppress_end_user_email;&#13;
+&#13;
+    current.mifi_approval = 'rejected';&#13;
+    current.tablet_approval = 'rejected';&#13;
+    current.phone_approval = 'rejected';&#13;
+    current.suppress_approval_email = true;&#13;
+    current.suppress_end_user_email = true;&#13;
+    current.work_notes = 'User is not eligibile to participate in the program - Eligibility Automatically Rejected\n';&#13;
+&#13;
+    notaLogTxt += '\nAFTER';&#13;
+    notaLogTxt += '\ncurrent.suppress_approval_email: ' + current.suppress_approval_email;&#13;
+    notaLogTxt += '\nsuppress_end_user_email: ' + suppress_end_user_email;&#13;
+&#13;
+    var mifiApproval = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+    mifiApproval.addQuery('approval_for', current.sys_id);&#13;
+    mifiApproval.addQuery('device', 'mifi');&#13;
+    mifiApproval.addQuery('state', 'requested');&#13;
+    mifiApproval.addQuery('active', true);&#13;
+    mifiApproval.query();&#13;
+&#13;
+    while (mifiApproval.next()) {&#13;
+&#13;
+        mifiApproval.comments = 'User is not eligibile to participate in the program - MiFi Device Rejected';&#13;
+        mifiApproval.state = 'rejected';&#13;
+        mifiApproval.update();&#13;
+    }&#13;
+&#13;
+    var ipadApproval = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+    ipadApproval.addQuery('approval_for', current.sys_id);&#13;
+    ipadApproval.addQuery('device', 'tablet');&#13;
+    ipadApproval.addQuery('state', 'requested');&#13;
+    ipadApproval.addQuery('active', true);&#13;
+    ipadApproval.query();&#13;
+&#13;
+    while (ipadApproval.next()) {&#13;
+&#13;
+        ipadApproval.comments = 'User is not eligibile to participate in the program - iPad Device Rejected.';&#13;
+        ipadApproval.state = 'rejected';&#13;
+        ipadApproval.update();&#13;
+    }&#13;
+&#13;
+    var byodApproval = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+    byodApproval.addQuery('approval_for', current.sys_id);&#13;
+    byodApproval.addQuery('device', 'phone');&#13;
+    byodApproval.addQuery('state', 'requested');&#13;
+    byodApproval.addQuery('active', true);&#13;
+    byodApproval.query();&#13;
+&#13;
+    while (byodApproval.next()) {&#13;
+&#13;
+        byodApproval.comments = 'User is not eligibile to participate in the program - BYOD Mobile Device Rejected.';&#13;
+        byodApproval.state = 'rejected';&#13;
+        byodApproval.update();&#13;
+    }&#13;
+&#13;
+    notaLogTxt += '\nAt End';&#13;
+    notaLogTxt += '\ncurrent.suppress_approval_email: ' + suppress_approval_email;&#13;
+    notaLogTxt += '\nsuppress_end_user_email: ' + suppress_end_user_email;&#13;
+&#13;
+    //gs.log(notaLogTxt, 'Eligibility Check Workflow: noneOfTheAbove');&#13;
+}</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d860888fdbf6ebc024e0d2e3ca9619e4</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5c60888fdbf6ebc024e0d2e3ca9619e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>checkIfSpecial();&#13;
+&#13;
+function checkIfSpecial() {&#13;
+&#13;
+    var logTxt = '*** Eligibility Check Workflow ***\n';&#13;
+&#13;
+    var myDivision = current.requested_for.u_division.u_name.toString().toLowerCase();&#13;
+    var myTitle = current.requested_for.title.toString().toLowerCase();&#13;
+&#13;
+    logTxt += '\nmyDivision: ' + myDivision + '\nmyTitle: ' + myTitle;&#13;
+&#13;
+    if (myDivision.indexOf('institutional na') &gt; -1 ||&#13;
+        myDivision.indexOf('inst institutional division') &gt; -1) {&#13;
+&#13;
+        logTxt += '\ncalling goForMiFi';&#13;
+        goForMiFi();&#13;
+    }&#13;
+&#13;
+    logTxt += '\nindex of pest: ' + myDivision.indexOf('pest');&#13;
+&#13;
+    //************************&#13;
+    // Adding these lines of code as per FRU0058744&#13;
+    if (myDivision.indexOf('pest') &gt; -1 ||&#13;
+        myDivision.indexOf('qsr') &gt; -1 ||&#13;
+        myDivision.indexOf('kay') &gt; -1 ||&#13;
+        myDivision.indexOf('quick service') &gt; -1 ||&#13;
+        myDivision.indexOf('food retail') &gt; -1 ||&#13;
+        myDivision.indexOf('equipment care') &gt; -1 ||&#13;
+        myDivision.indexOf('gcs') &gt; -1 ||&#13;
+        myDivision.indexOf('eec') &gt; -1 ||&#13;
+        myDivision.indexOf('smart care') &gt; -1) {&#13;
+&#13;
+        logTxt += '\ncalling noneOfTheAbove';&#13;
+        noneOfTheAbove();&#13;
+    }&#13;
+&#13;
+    //gs.log(logTxt, 'Eligibility Check Workflow');&#13;
+&#13;
+&#13;
+    //****************************&#13;
+&#13;
+    /*&#13;
+ 	************************&#13;
+	// Commenting these lines of code as per FRU0058744&#13;
+	&#13;
+	if (myDivision.indexOf('pest elim') &gt; -1) {&#13;
+		&#13;
+		// Swapped for new titles as of FRU0042675&#13;
+		//if (myTitle.indexOf('training manager') &gt; -1 || myTitle.indexOf('training representative') &gt; -1 || myTitle.indexOf('training specialist') &gt; -1 || myTitle.indexOf('program specialist') &gt; -1 || myTitle.indexOf('select segment specialist') &gt; -1 || myTitle.indexOf('select segment specialist sco') &gt; -1 || myTitle.indexOf('service specialist') &gt; -1 || myTitle.indexOf('service specialist ca') &gt; -1 || myTitle.indexOf('service specialist sco') &gt; -1 || myTitle.indexOf('service specialist trainee') &gt; -1 || myTitle.indexOf('service specialist trainee ca') &gt; -1 || myTitle.indexOf('sr service specialist') &gt; -1 || myTitle.indexOf('sr service specialist ca') &gt; -1 || myTitle.indexOf('sr service specialist sco') &gt; -1 || myTitle.indexOf('utility service specialist') &gt; -1 || myTitle.indexOf('utility service specialist ca') &gt; -1 || myTitle.indexOf('remote coverage specialist') &gt; -1) {&#13;
+			&#13;
+			// // New Pest titles as of FRU0042675&#13;
+			if (myTitle.indexOf('sr service specialist') &gt; -1 ||&#13;
+				myTitle.indexOf('sr service specialist') &gt; -1 ||&#13;
+			myTitle.indexOf('utility service specialist') &gt; -1 ||&#13;
+			myTitle.indexOf('senior service specialist') &gt; -1 ||&#13;
+			myTitle.indexOf('service specialist') &gt; -1 ||&#13;
+			myTitle.indexOf('service specialist trainee') &gt; -1 ||&#13;
+			myTitle.indexOf('service specialist') &gt; -1 ||&#13;
+			myTitle.indexOf('service specialist trainee.') &gt; -1 ||&#13;
+			myTitle.indexOf('utility service specialist.') &gt; -1) {&#13;
+				&#13;
+				noneOfTheAbove();&#13;
+				&#13;
+			}&#13;
+		}&#13;
+		&#13;
+		if (myDivision.indexOf('equipment care') &gt; -1 || myDivision.indexOf('eec') &gt; -1 ||&#13;
+			myDivision.indexOf('smart care') &gt; -1) {&#13;
+			&#13;
+			if (myTitle.indexOf('assoc territory service spec') &gt; -1 ||&#13;
+				myTitle.indexOf('service technician equip care') &gt; -1 ||&#13;
+			myTitle.indexOf('master service tech equip care') &gt; -1 ||&#13;
+			myTitle.indexOf('assoc service tech equip care') &gt; -1 ||&#13;
+			myTitle.indexOf('master service tech ii') &gt; -1 ||&#13;
+			myTitle.indexOf('lead service tech equip care') &gt; -1) {&#13;
+				&#13;
+				noneOfTheAbove();&#13;
+			}&#13;
+			&#13;
+		}&#13;
+ 		******************************&#13;
+ 		*/&#13;
+}&#13;
+&#13;
+&#13;
+function goForMiFi() {&#13;
+&#13;
+    current.mifi_approval = 'approved';&#13;
+    current.tablet_approval = 'rejected';&#13;
+    current.work_notes = 'User falls within Special User Eligibility Rules - MiFi Device Approved\n';&#13;
+    current.work_notes += 'As the user has been approved for a MiFi Device, the approval for an iPad has been automatically rejected for an iPad as per policy.';&#13;
+&#13;
+&#13;
+    var mifiApproval = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+    mifiApproval.addQuery('approval_for', current.sys_id);&#13;
+    mifiApproval.addQuery('device', 'mifi');&#13;
+    mifiApproval.addQuery('state', 'requested');&#13;
+    mifiApproval.addQuery('active', true);&#13;
+    mifiApproval.query();&#13;
+&#13;
+    while (mifiApproval.next()) {&#13;
+&#13;
+        mifiApproval.comments = 'User falls within Special User Eligibility Rules - MiFi Device Approved';&#13;
+        mifiApproval.state = 'approved';&#13;
+        mifiApproval.update();&#13;
+    }&#13;
+&#13;
+    var ipadApproval = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+    ipadApproval.addQuery('approval_for', current.sys_id);&#13;
+    ipadApproval.addQuery('device', 'tablet');&#13;
+    ipadApproval.addQuery('state', 'requested');&#13;
+    ipadApproval.addQuery('active', true);&#13;
+    ipadApproval.query();&#13;
+&#13;
+    while (ipadApproval.next()) {&#13;
+&#13;
+        ipadApproval.comments = 'As the user has been approved for a MiFi Device, the approval for an iPad has been automatically rejected for an iPad as per policy.';&#13;
+        ipadApproval.state = 'rejected';&#13;
+        ipadApproval.update();&#13;
+    }&#13;
+}&#13;
+&#13;
+function noneOfTheAbove() {&#13;
+&#13;
+    var notaLogTxt = '*** Eligibility Check Workflow: noneOfTheAbove **\n';&#13;
+    notaLogTxt += '\nBEFORE';&#13;
+    notaLogTxt += '\ncurrent.suppress_approval_email: ' + current.suppress_approval_email;&#13;
+    notaLogTxt += '\nsuppress_end_user_email: ' + suppress_end_user_email;&#13;
+&#13;
+    current.mifi_approval = 'rejected';&#13;
+    current.tablet_approval = 'rejected';&#13;
+    current.phone_approval = 'rejected';&#13;
+    current.suppress_approval_email = true;&#13;
+    current.suppress_end_user_email = true;&#13;
+    current.work_notes = 'User is not eligibile to participate in the program - Eligibility Automatically Rejected\n';&#13;
+&#13;
+    notaLogTxt += '\nAFTER';&#13;
+    notaLogTxt += '\ncurrent.suppress_approval_email: ' + current.suppress_approval_email;&#13;
+    notaLogTxt += '\nsuppress_end_user_email: ' + suppress_end_user_email;&#13;
+&#13;
+    var mifiApproval = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+    mifiApproval.addQuery('approval_for', current.sys_id);&#13;
+    mifiApproval.addQuery('device', 'mifi');&#13;
+    mifiApproval.addQuery('state', 'requested');&#13;
+    mifiApproval.addQuery('active', true);&#13;
+    mifiApproval.query();&#13;
+&#13;
+    while (mifiApproval.next()) {&#13;
+&#13;
+        mifiApproval.comments = 'User is not eligibile to participate in the program - MiFi Device Rejected';&#13;
+        mifiApproval.state = 'rejected';&#13;
+        mifiApproval.update();&#13;
+    }&#13;
+&#13;
+    var ipadApproval = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+    ipadApproval.addQuery('approval_for', current.sys_id);&#13;
+    ipadApproval.addQuery('device', 'tablet');&#13;
+    ipadApproval.addQuery('state', 'requested');&#13;
+    ipadApproval.addQuery('active', true);&#13;
+    ipadApproval.query();&#13;
+&#13;
+    while (ipadApproval.next()) {&#13;
+&#13;
+        ipadApproval.comments = 'User is not eligibile to participate in the program - iPad Device Rejected.';&#13;
+        ipadApproval.state = 'rejected';&#13;
+        ipadApproval.update();&#13;
+    }&#13;
+&#13;
+    var byodApproval = new GlideRecord('x_elin_mobile_serv_eligibility_approval');&#13;
+    byodApproval.addQuery('approval_for', current.sys_id);&#13;
+    byodApproval.addQuery('device', 'phone');&#13;
+    byodApproval.addQuery('state', 'requested');&#13;
+    byodApproval.addQuery('active', true);&#13;
+    byodApproval.query();&#13;
+&#13;
+    while (byodApproval.next()) {&#13;
+&#13;
+        byodApproval.comments = 'User is not eligibile to participate in the program - BYOD Mobile Device Rejected.';&#13;
+        byodApproval.state = 'rejected';&#13;
+        byodApproval.update();&#13;
+    }&#13;
+&#13;
+    notaLogTxt += '\nAt End';&#13;
+    notaLogTxt += '\ncurrent.suppress_approval_email: ' + suppress_approval_email;&#13;
+    notaLogTxt += '\nsuppress_end_user_email: ' + suppress_end_user_email;&#13;
+&#13;
+    //gs.log(notaLogTxt, 'Eligibility Check Workflow: noneOfTheAbove');&#13;
+}</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Special User Handling">d860888fdbf6ebc024e0d2e3ca9619e4</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>9060888fdbf6ebc024e0d2e3ca9619e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Wait for condition">d93a02ae0a0a0aa30077abad3fdac035</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>11</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Wait for Answer - iPad</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>a060c403db3aebc024e0d2e3ca9619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>684</x>
+        <y>164</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=a060c403db3aebc024e0d2e3ca9619a8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>a060c403db3aebc024e0d2e3ca9619a8</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>2460c403db3aebc024e0d2e3ca9619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>a060c403db3aebc024e0d2e3ca9619a8</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>e460c403db3aebc024e0d2e3ca9619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>tablet_approval!=requested^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>a060c403db3aebc024e0d2e3ca9619a8</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>e460c403db3aebc024e0d2e3ca9619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>tablet_approval!=requested^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>a060c403db3aebc024e0d2e3ca9619a8</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>2460c403db3aebc024e0d2e3ca9619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Wait for Answer - iPad">a060c403db3aebc024e0d2e3ca9619a8</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>2c60c403db3aebc024e0d2e3ca9619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Wait for condition">d93a02ae0a0a0aa30077abad3fdac035</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>10</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Wait for Answer - MiFi Device</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>d460c403db3aebc024e0d2e3ca9619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>684</x>
+        <y>89</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=d460c403db3aebc024e0d2e3ca9619a1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d460c403db3aebc024e0d2e3ca9619a1</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1c60c403db3aebc024e0d2e3ca9619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>mifi_approval!=requested^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d460c403db3aebc024e0d2e3ca9619a1</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5860c403db3aebc024e0d2e3ca9619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d460c403db3aebc024e0d2e3ca9619a1</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1c60c403db3aebc024e0d2e3ca9619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>mifi_approval!=requested^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d460c403db3aebc024e0d2e3ca9619a1</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5860c403db3aebc024e0d2e3ca9619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Wait for Answer - MiFi Device">d460c403db3aebc024e0d2e3ca9619a1</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5060c403db3aebc024e0d2e3ca9619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Wait for condition">d93a02ae0a0a0aa30077abad3fdac035</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>9</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Wait for Answer - Mobile Phone</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1860c403db3aebc024e0d2e3ca9619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>684</x>
+        <y>0</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=1860c403db3aebc024e0d2e3ca9619a2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1860c403db3aebc024e0d2e3ca9619a2</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5c60c403db3aebc024e0d2e3ca9619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>phone_approval!=requested^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1860c403db3aebc024e0d2e3ca9619a2</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>9860c403db3aebc024e0d2e3ca9619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1860c403db3aebc024e0d2e3ca9619a2</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>5c60c403db3aebc024e0d2e3ca9619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>phone_approval!=requested^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>1860c403db3aebc024e0d2e3ca9619a2</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>9860c403db3aebc024e0d2e3ca9619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Wait for Answer - Mobile Phone">1860c403db3aebc024e0d2e3ca9619a2</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>9060c403db3aebc024e0d2e3ca9619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Wait for condition">d93a02ae0a0a0aa30077abad3fdac035</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>13</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Wait for answer- Wearable</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>9860888fdbf6ebc024e0d2e3ca9619e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>684</x>
+        <y>326</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=9860888fdbf6ebc024e0d2e3ca9619e3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>9860888fdbf6ebc024e0d2e3ca9619e3</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1c60888fdbf6ebc024e0d2e3ca9619e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>9860888fdbf6ebc024e0d2e3ca9619e3</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>dc60888fdbf6ebc024e0d2e3ca9619e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>wearable_approval!=requested^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>9860888fdbf6ebc024e0d2e3ca9619e3</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>dc60888fdbf6ebc024e0d2e3ca9619e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>wearable_approval!=requested^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>9860888fdbf6ebc024e0d2e3ca9619e3</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1c60888fdbf6ebc024e0d2e3ca9619e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Wait for answer- Wearable">9860888fdbf6ebc024e0d2e3ca9619e3</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1460888fdbf6ebc024e0d2e3ca9619e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Wait for condition">d93a02ae0a0a0aa30077abad3fdac035</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>12</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Wait for answer- WWAN/PC SIM</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>6860c403db3aebc024e0d2e3ca9619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+        <x>684</x>
+        <y>239</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=6860c403db3aebc024e0d2e3ca9619a3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>6860c403db3aebc024e0d2e3ca9619a3</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>ac60c403db3aebc024e0d2e3ca9619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>wwan_sim_approval!=requested^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>6860c403db3aebc024e0d2e3ca9619a3</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>e860c403db3aebc024e0d2e3ca9619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>6860c403db3aebc024e0d2e3ca9619a3</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>ac60c403db3aebc024e0d2e3ca9619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>wwan_sim_approval!=requested^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>6860c403db3aebc024e0d2e3ca9619a3</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>e860c403db3aebc024e0d2e3ca9619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Wait for answer- WWAN/PC SIM">6860c403db3aebc024e0d2e3ca9619a3</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>e060c403db3aebc024e0d2e3ca9619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+    </wf_condition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">e860c403db3aebc024e0d2e3ca9619a7</condition>
+        <from display_value="Reset Eligibility Approvals">2460c403db3aebc024e0d2e3ca9619a7</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>2060c403db3aebc024e0d2e3ca9619ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="Special User Handling">d860888fdbf6ebc024e0d2e3ca9619e4</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Yes">e460c403db3aebc024e0d2e3ca9619a5</condition>
+        <from display_value="Is the Approval E-mail Suppressed?">a860c403db3aebc024e0d2e3ca9619a4</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>2460c403db3aebc024e0d2e3ca9619ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="Are End User E-mails Suppressed?">1460888fdbf6ebc024e0d2e3ca9619e2</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Yes">5060888fdbf6ebc024e0d2e3ca9619e3</condition>
+        <from display_value="Are End User E-mails Suppressed?">1460888fdbf6ebc024e0d2e3ca9619e2</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>6060c403db3aebc024e0d2e3ca9619ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="Reconcile Flags">d060c403db3aebc024e0d2e3ca9619a0</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Complete">d860888fdbf6ebc024e0d2e3ca9619e1</condition>
+        <from display_value="All Approvals Are Complete">dc60888fdbf6ebc024e0d2e3ca9619e0</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>6060c403db3aebc024e0d2e3ca9619ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="Send user email if not suppressed">1060888fdbf6ebc024e0d2e3ca9619e6</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">9c60c403db3aebc024e0d2e3ca96199e</condition>
+        <from display_value="Send E-mail - Manager - Eligibility Requested">5060c403db3aebc024e0d2e3ca96199e</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>6460c403db3aebc024e0d2e3ca9619ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="Are End User E-mails Suppressed?">1460888fdbf6ebc024e0d2e3ca9619e2</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">1060c403db3aebc024e0d2e3ca9619a1</condition>
+        <from display_value="Reconcile Flags">d060c403db3aebc024e0d2e3ca9619a0</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>6860c403db3aebc024e0d2e3ca9619ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="Wait for Answer - Mobile Phone">1860c403db3aebc024e0d2e3ca9619a2</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">1060c403db3aebc024e0d2e3ca9619a1</condition>
+        <from display_value="Reconcile Flags">d060c403db3aebc024e0d2e3ca9619a0</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>6c60c403db3aebc024e0d2e3ca9619ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="Wait for Answer - iPad">a060c403db3aebc024e0d2e3ca9619a8</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="No">6860c403db3aebc024e0d2e3ca9619a5</condition>
+        <from display_value="Is the Approval E-mail Suppressed?">a860c403db3aebc024e0d2e3ca9619a4</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>a460c403db3aebc024e0d2e3ca9619ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="Send E-mail - Manager - Eligibility Requested">5060c403db3aebc024e0d2e3ca96199e</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">9860c403db3aebc024e0d2e3ca96199d</condition>
+        <from display_value="Send user email if not suppressed">1060888fdbf6ebc024e0d2e3ca9619e6</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>a860c403db3aebc024e0d2e3ca9619ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="End">1860888fdbf6ebc024e0d2e3ca9619e5</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">2c60c403db3aebc024e0d2e3ca9619a8</condition>
+        <from display_value="Wait for Answer - iPad">a060c403db3aebc024e0d2e3ca9619a8</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>e060c403db3aebc024e0d2e3ca9619aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="All Approvals Are Complete">dc60888fdbf6ebc024e0d2e3ca9619e0</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Incomplete">5860888fdbf6ebc024e0d2e3ca9619e1</condition>
+        <from display_value="All Approvals Are Complete">dc60888fdbf6ebc024e0d2e3ca9619e0</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>e060c403db3aebc024e0d2e3ca9619ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="Send user email if not suppressed">1060888fdbf6ebc024e0d2e3ca9619e6</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">6c60c403db3aebc024e0d2e3ca9619a6</condition>
+        <from display_value="Send E-mail - Employee - Eligibility Requested">2060c403db3aebc024e0d2e3ca9619a6</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>e460c403db3aebc024e0d2e3ca9619aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="Reconcile Flags">d060c403db3aebc024e0d2e3ca9619a0</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">9060c403db3aebc024e0d2e3ca9619a3</condition>
+        <from display_value="Wait for Answer - Mobile Phone">1860c403db3aebc024e0d2e3ca9619a2</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>e460c403db3aebc024e0d2e3ca9619ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="All Approvals Are Complete">dc60888fdbf6ebc024e0d2e3ca9619e0</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">1c60c403db3aebc024e0d2e3ca96199f</condition>
+        <from display_value="Begin">1460c403db3aebc024e0d2e3ca96199f</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>e860c403db3aebc024e0d2e3ca9619aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="Reset Eligibility Approvals">2460c403db3aebc024e0d2e3ca9619a7</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">1060c403db3aebc024e0d2e3ca9619a1</condition>
+        <from display_value="Reconcile Flags">d060c403db3aebc024e0d2e3ca9619a0</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>e860c403db3aebc024e0d2e3ca9619ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="Wait for Answer - MiFi Device">d460c403db3aebc024e0d2e3ca9619a1</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">9060888fdbf6ebc024e0d2e3ca9619e5</condition>
+        <from display_value="Special User Handling">d860888fdbf6ebc024e0d2e3ca9619e4</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>e860c403db3aebc024e0d2e3ca9619ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="Is the Approval E-mail Suppressed?">a860c403db3aebc024e0d2e3ca9619a4</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">5060c403db3aebc024e0d2e3ca9619a2</condition>
+        <from display_value="Wait for Answer - MiFi Device">d460c403db3aebc024e0d2e3ca9619a1</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>ec60c403db3aebc024e0d2e3ca9619a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="All Approvals Are Complete">dc60888fdbf6ebc024e0d2e3ca9619e0</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="No">d060888fdbf6ebc024e0d2e3ca9619e3</condition>
+        <from display_value="Are End User E-mails Suppressed?">1460888fdbf6ebc024e0d2e3ca9619e2</from>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>ec60c403db3aebc024e0d2e3ca9619ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <to display_value="Send E-mail - Employee - Eligibility Requested">2060c403db3aebc024e0d2e3ca9619a6</to>
+    </wf_transition>
+    <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 19:12:16</sys_created_on>
+        <sys_id>1460888fdbf6ebc024e0d2e3ca9619df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 19:12:16</sys_updated_on>
+        <workflow_version display_value="Mobile Services - Eligibility">5060888fdbf6ebc024e0d2e3ca9619df</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="update_multiple" query="workflow=efce32e5db722f8024e0d2e3ca9619d3^sys_id!=5060888fdbf6ebc024e0d2e3ca9619df">
+        <published>false</published>
+    </wf_workflow_version>
+</record_update>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_elin_mobile_serv.MSMUserAjax</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>MSMUserAjax</name>
+        <script><![CDATA[var MSMUserAjax = Class.create();
+MSMUserAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	getUserGroupMembershipIds: function() {
+
+		var userID = this.getParameter('sysparm_user_id');
+		var groupARR = [];
+
+		var grpMemGR = new GlideRecord('sys_user_grmember');
+		grpMemGR.addQuery('user', userID);
+		grpMemGR.query();
+
+		while (grpMemGR.next()) {
+
+			groupARR.push(String(grpMemGR.group));
+		}
+
+		return groupARR.toString();
+	},
+
+	getUserGroupMembershipNames: function() {
+
+		var userID = this.getParameter('sysparm_user_id');
+		var groupARR = [];
+
+		var grpMemGR = new GlideRecord('sys_user_grmember');
+		grpMemGR.addQuery('user', userID);
+		grpMemGR.query();
+
+		while (grpMemGR.next()) {
+
+			groupARR.push(String(grpMemGR.group.name));
+		}
+
+		return groupARR.toString();
+	},
+
+	type: 'MSMUserAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-02 22:27:08</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b141718ddb7e278024e0d2e3ca961922</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>MSMUserAjax</sys_name>
+        <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+        <sys_update_name>sys_script_include_b141718ddb7e278024e0d2e3ca961922</sys_update_name>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-02 22:37:21</sys_updated_on>
+    </sys_script_include>
+</record_update>

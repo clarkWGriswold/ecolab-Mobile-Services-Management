@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="x_elin_mobile_serv_mobile_services" label="Mobile Services Eligibility" max_length="40" name="x_elin_mobile_serv_eligibility" sizeclass="67" type="collection">
+        <element label="Allow upgrade" max_length="40" name="allow_upgrade" type="boolean"/>
+        <element label="Break fix waiver used" max_length="40" name="break_fix_waiver_used" type="boolean"/>
+        <element label="Approved via email - MiFi Device" max_length="40" name="email_approved_mifi" type="boolean"/>
+        <element label="Approved via email - Mobile Phone" max_length="40" name="email_approved_phone" type="boolean"/>
+        <element label="Approved via email - iPad" max_length="40" name="email_approved_tablet" type="boolean"/>
+        <element label="Approved via email - Wearables" max_length="40" name="email_approved_wearable" type="boolean"/>
+        <element label="Approved via email - WWAN / PC Sim" max_length="40" name="email_approved_wwan_sim" type="boolean"/>
+        <element label="Are you an E-Level resource (Director or above)?" max_length="40" name="e_level_resource" type="boolean"/>
+        <element label="Require communication where no landline exists?" max_length="40" name="landline" type="boolean"/>
+        <element choice="3" choice_field="phone_approval" choice_table="x_elin_mobile_serv_eligibility" default="requested" label="MiFi Approval" max_length="40" name="mifi_approval" type="choice">
+            <choice/>
+        </element>
+        <element label="None of the above" max_length="40" name="none_of_the_above" type="boolean"/>
+        <element label="Notify suppressed user" max_length="40" name="notify_suppressed_user" type="boolean"/>
+        <element label="Do you provide on-call, or after hours support?" max_length="40" name="oncall" type="boolean"/>
+        <element label="Override reason" max_length="40" name="override_reason" type="string"/>
+        <element choice="3" default="requested" label="Mobile Phone Approval" max_length="40" name="phone_approval" type="choice">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Not yet requested" sequence="100" value="not requested"/>
+                <element inactive_on_update="false" label="Requested" sequence="200" value="requested"/>
+                <element inactive_on_update="false" label="Approved" sequence="300" value="approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="400" value="rejected"/>
+                <element inactive_on_update="false" label="Opt out" sequence="500" value="opt out"/>
+                <element inactive_on_update="false" label="Terminated" sequence="600" value="terminated"/>
+            </choice>
+        </element>
+        <element label="Reset workflow" max_length="40" name="reset_workflow" type="boolean"/>
+        <element label="Suppress approval emails" max_length="40" name="suppress_approval_email" type="boolean"/>
+        <element label="Suppress end user emails" max_length="40" name="suppress_end_user_email" type="boolean"/>
+        <element choice="3" choice_field="phone_approval" choice_table="x_elin_mobile_serv_eligibility" default="requested" label="iPad Approval" max_length="40" name="tablet_approval" type="choice">
+            <choice/>
+        </element>
+        <element label="&gt;50% of professional time spent out of office?" max_length="40" name="time_ooo" type="boolean"/>
+        <element label="Waiver used on" max_length="40" name="waiver_used_on" type="glide_date"/>
+        <element choice="3" choice_field="phone_approval" choice_table="x_elin_mobile_serv_eligibility" default="requested" label="Wearables Approval" max_length="40" name="wearable_approval" type="choice">
+            <choice/>
+        </element>
+        <element choice="3" choice_field="phone_approval" choice_table="x_elin_mobile_serv_eligibility" default="requested" label="WWAN/PC SIM Approval" max_length="40" name="wwan_sim_approval" type="choice">
+            <choice/>
+        </element>
+    </element>
+</database>

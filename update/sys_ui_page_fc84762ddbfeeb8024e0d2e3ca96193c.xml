@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function actionOk() {
+
+	GlideDialogWindow.get().destroy();
+	return true; // Do run some processing script
+}
+
+function onCancel() {
+
+	GlideDialogWindow.get().destroy(); // drop the window
+	return false; // Do not run the processing script
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_elin_mobile_serv_msm_send_approval_reminder.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<g:ui_form>
+		<div style="background-color:#edf2f9; border:2px solid #34598a; padding: 15px; border-radius: 6px;">
+			<table width="100%">
+
+				<g:evaluate var="jvar_current_id" expression="RP.getWindowProperties().get('current_id')" />
+				<input type="HIDDEN" id="current_id" name="current_id" value="${RP.getWindowProperties().get('current_id')}" />
+
+				<g:evaluate var="jvar_suppress_enduser" expression="RP.getWindowProperties().get('suppress_enduser')" />
+				<input type="HIDDEN" id="suppress_enduser" name="suppress_enduser" value="${RP.getWindowProperties().get('suppress_enduser')}" />
+
+				<g:evaluate var="jvar_suppress_approval" expression="RP.getWindowProperties().get('suppress_approval')" />
+				<input type="HIDDEN" id="suppress_approval" name="suppress_approval" value="${RP.getWindowProperties().get('suppress_approval')}" />
+
+				<th style="font-size:125%">Please verify options below:</th>
+				<tr id="select_row">
+					<td>
+						<div style="background-color:#edf2f9;">
+							<table>
+								<tr>
+									<td colspan="1">
+										<br />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="1">
+										<br />
+									</td>
+								</tr>
+								<tr id="select_row">
+									<td>
+										<table>
+											<tr>
+												<td height="30px" class="label" nowrap="true" align="left">
+													Would you like the Manager to receive this approval reminder?
+												</td>
+												<td height="30px" align="left">
+													<select id="enable_approval_email" name="enable_approval_email">
+														<option value="yes">Yes</option>
+														<option value="no">No</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td height="30px" class="label" nowrap="true" align="left">
+													Would you like the End User to receive instructions following the approval decision?
+												</td>
+												<td height="30px" align="left">
+													<select id="enable_end_user_email" name="enable_end_user_email">
+														<option value="yes">Yes</option>
+														<option value="no">No</option>
+													</select>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<br />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right">
+						<!--<button type="button" onClick="return forgetIt();" name="forgetIt"> Cancel </button>  -->
+						<!--<button type="button" onClick="return sendReminder();" name="sendReminderOK"> Send Reminder </button>  -->
+						<g:dialog_buttons_ok_cancel cancel="return onCancel();" cancel_type="button" ok="return actionOk()" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</g:ui_form>
+</j:jelly>]]></html>
+        <name>msm_send_approval_reminder</name>
+        <processing_script><![CDATA[var userMail = request.getParameter('enable_end_user_email').toString().toLowerCase();
+var approvalMail = request.getParameter('enable_approval_email').toString();
+var currentId = request.getParameter('current_id');
+
+var msmeGR = new GlideRecord('x_elin_mobile_serv_eligibility');
+
+if (msmeGR.get(currentId)) {
+
+	if (userMail == 'yes') {
+
+		msmeGR.suppress_end_user_email = false;
+	}
+
+	else {
+
+		msmeGR.suppress_end_user_email = true;
+	}
+
+	if (approvalMail == 'yes') {
+
+		msmeGR.suppress_approval_email = false;
+	}
+
+	else {
+
+		msmeGR.suppress_approval_email = true;
+	}
+
+	var userName = gs.getUserDisplayName();
+
+	msmeGR.work_notes = userName + ' has sent the approval reminder to ' + msmeGR.manager.getDisplayValue() + ' on behalf of ' + msmeGR.requested_for.getDisplayValue();
+	msmeGR.update();
+
+	gs.eventQueue('x_elin_mobile_serv.elig_appr.inserted', msmeGR, msmeGR.manager, 'reminder');
+	gs.addInfoMessage('Approval Reminder has been sent to ' + msmeGR.manager.getDisplayValue());
+
+	var urlOnStack = Packages.com.glide.sys.GlideSession.get().getStack().bottom();
+	response.sendRedirect(urlOnStack);
+}]]></processing_script>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-04 16:42:51</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fc84762ddbfeeb8024e0d2e3ca96193c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>msm_send_approval_reminder</sys_name>
+        <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+        <sys_update_name>sys_ui_page_fc84762ddbfeeb8024e0d2e3ca96193c</sys_update_name>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-04 16:55:45</sys_updated_on>
+    </sys_ui_page>
+</record_update>

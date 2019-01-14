@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>false</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description>Allow list_edit for tablet_approval in x_elin_mobile_serv_eligibility, for users with role x_elin_mobile_serv.eligibility.admin.</description>
+        <name>x_elin_mobile_serv_eligibility.wearable_approval</name>
+        <operation display_value="list_edit">54f535270a0a0b8c007c67009ab2bdc0</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-08 21:12:39</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>37eb1043db7eebc024e0d2e3ca961932</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_elin_mobile_serv_eligibility.wearable_approval</sys_name>
+        <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+        <sys_update_name>sys_security_acl_37eb1043db7eebc024e0d2e3ca961932</sys_update_name>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-08 21:12:39</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>true</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_elin_mobile_serv_eligibility</collection>
+        <condition table="x_elin_mobile_serv_eligibility">suppress_end_user_email!=true^phone_approvalCHANGESTOopt out^EQ<item endquery="false" field="suppress_end_user_email" goto="false" newquery="false" operator="!=" or="false" value="true"/>
+            <item endquery="false" field="phone_approval" goto="false" newquery="false" operator="CHANGESTO" or="false" value="opt out"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <event_name/>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>engine</generation_type>
+        <group/>
+        <group_field/>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <list/>
+        <list_field/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>&nbsp;</p>
+<p><strong>EMPLOYEE NAME =&nbsp;${requested_for}</strong></p>
+<p><strong>EMPLOYEE ID =&nbsp;${requested_for.employee_number}</strong></p>
+<p><strong>EMPLOYEE EMAIL ADDRESS =&nbsp;${requested_for.email}</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>&nbsp;</p>
+<p>We have received notice that you do not wish to participate in the Ecolab Mobile Services Corporate program for a <span style="color: #0000ff;"><strong>mobile phone </strong></span>device.&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>What do you need to know about opting out of the Ecolab Mobile Services Program?</strong></p>
+<p><strong>&nbsp;</strong></p>
+<ul>
+<li>You are choosing to forego any reimbursement for your mobile device or service.&nbsp;</li>
+<li>Any expenses submitted related to mobile services will be flagged for audit.&nbsp;</li>
+<li>You must still be accessible by mobile phone as required by your Ecolab position and responsibilities.</li>
+<li>If you opt out of the program, you will not be eligible to enroll for one calendar year.&nbsp; If your role within the company changes, you can request an exception to this rule along with your manager.&nbsp;</li>
+<li>You and your family are still eligible to receive negotiated discounted rates under the corporate contract offerings.&nbsp; The current discounts may be viewed on each carrier's Ecolab portal.&nbsp; You will be asked to verify your eligibility by providing a corporate email address and/or your company badge with picture.&nbsp;</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>&nbsp;</strong></p>
+<p>&nbsp;</p>
+<p><strong>Thank you,&nbsp;</strong></p>
+<p>&nbsp;</p>
+<p><span style="color: #0000ff;"><strong>Mobile Services Group</strong></span></p>
+<p><strong><span style="color: #0000ff;">ECOLAB</span>&nbsp;</strong>655 LONE OAK DR, BLDG E/5, EAGAN, MN 55121</p>
+<p><strong><span style="color: #0000ff;">T</span>&nbsp;</strong>888 209 3733&nbsp;&nbsp;<strong><span style="color: #0000ff;">E</span>&nbsp;</strong><a href="mailto:mobile.services@ecolab.com">mobile.services@ecolab.com</a></p>
+<p><strong><em>Find answers on&nbsp;</em><a href="http://inside.ecolab.com/departments/it_information-technology/mobile-services"><em>Inside Ecolab &gt; Mobile Services</em></a>&nbsp;or c<em>ontact the Mobile Services Help Desk at&nbsp;<span style="color: #0000ff;">1-888-209-3733 Monday-Friday from 7am until 7pm CST.&nbsp;</span></em></strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>MSM-Eligibility-Phone - Opt Out</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>requested_for</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Mobile Device Eligibility: User Opt Out for BYOD Mobile Phone/Smartphone device</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-07 20:23:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>aad6c326db3ee7c024e0d2e3ca9619ee</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>MSM-Eligibility-Phone - Opt Out</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+        <sys_update_name>sysevent_email_action_aad6c326db3ee7c024e0d2e3ca9619ee</sys_update_name>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-07 20:33:10</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <user/>
+        <user_field/>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

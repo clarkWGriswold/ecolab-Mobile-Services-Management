@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_elin_mobile_serv_eligibility</collection>
+        <condition table="x_elin_mobile_serv_eligibility">suppress_approval_email!=true^EQ<item endquery="false" field="suppress_approval_email" goto="false" newquery="false" operator="!=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <event_name>x_elin_mobile_serv.elig_appr.inserted</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <group/>
+        <group_field/>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <list/>
+        <list_field/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p><span style="font-family: arial, helvetica, sans-serif;"><strong>ASSOCIATE NAME =&nbsp;${requested_for}</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;"><strong>ASSOCIATE WORKDAY ID = ${requested_for.u_workday_id}</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;"><strong>ASSOCIATE NUMBER = ${requested_for.email}<br /></strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;"><strong>&nbsp;</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif;">We were recently notified by Human Resources of a new hire or job change for an associate that now reports to you. Job or manager changes reset the ServiceNow eligibility records for the Mobile Services Program.&nbsp; <strong><span style="color: #ff0000;">Please &lsquo;Approve&rsquo; or &lsquo;Reject&rsquo; below to update the Mobile Services eligibility record for your associate.</span></strong>&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><strong>Note: The eligibility record must be up to date for the associate to utilize self-service tools</strong>&nbsp;</p>
+<p>&nbsp;</p>
+<hr />
+<p><span style="font-family: arial, helvetica, sans-serif;">&nbsp;${mail_script:msm_getDevicesForApproval}</span></p>
+<p><em><span style="font-family: arial, helvetica, sans-serif;">Please note that this will open an email in Outlook on your behalf. &nbsp;Simply click send and ServiceNow will update this request. &nbsp;Your associate will receive an email with required next steps to complete the onboard.</span></em>&nbsp;</p>
+<hr />
+<p><span style="color: #ff0000;"><strong>NOTE:&nbsp;</strong></span><em>If you plan to reject eligibility for an associate, we suggest that you discuss that with the associate, prior to taking action, as the notification email will be received by the associate within minutes of submitting the form.&nbsp;</em></p>
+<p>&nbsp;</p>
+<p><span style="color: #0000ff;"><strong>Timeline and Costs</strong></span></p>
+<p>Program eligibility is ultimately at each manager&rsquo;s discretion. Please consider financial impacts to the business unit and budgets. All program costs are allocated to the business unit and associated cost center for the associate.</p>
+<ul style="list-style-type: circle; padding-left: 60px;">
+<ul style="list-style-type: circle; padding-left: 60px;">
+<li>Average 2016 Smartphone Cost (voice, text, and data plans) <strong>$110</strong>&nbsp;</li>
+<li>Average 2016 MiFi Device Cost (data plan only) <strong>$60</strong>&nbsp;</li>
+</ul>
+</ul>
+<ul>
+<li>Delays due to manager or associate inaction, incorrect carrier account information when converting a line, and other unusual circumstances are managed by the Mobile Services Group to reduce the onboard process time.&nbsp;</li>
+<li>Mobile phones charges cannot be expensed back to Ecolab due to manager or associate inaction to approve or enroll into the program. Associates are ultimately responsible for ensuring completion to the Mobile Services Program.&nbsp;</li>
+<li>The time to process and enroll a user is approximately 5 business days.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>&nbsp;</strong><span style="color: #0000ff;"><strong>Ecolab Mobile Services Eligibility Criteria</strong></span></p>
+<ul>
+<li>E-Level Resources (Director or above) are eligible for enrollment; however, some exceptions may apply.&nbsp;</li>
+<li>The associates position requires the associate to spend 50% or more of their professional time out of the office.&nbsp;</li>
+<li>The associates position requires the employee to be &ldquo;On Call.&rdquo;&nbsp;</li>
+<li>The associates position requires customer and/or corporate communications in a location where there is no company provided landline.&nbsp;</li>
+<li>Newly-hired associate and associates who become eligible due to a change in status or responsibilities may join the program after obtaining the appropriate managerial approval.&nbsp;</li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="color: #0000ff;"><strong>How to Reassign MiFi Device</strong></span>&nbsp;</p>
+<p>If you have a MiFi device from a recent off board, please contact the Mobile Services Group to reassign the device and line of service to your new associate. This is a great way to keep mobile services costs down for you and your business unit.</p>
+<p>&nbsp;</p>
+<p>Steps to reassign the MiFi device to another employee in your group:&nbsp;</p>
+<ul>
+<li>email <a href="mailto:mobile.services@ecolab.com">mobile.services@ecolab.com</a>&nbsp;</li>
+<li>Subject Line: Reassign MiFi&nbsp;</li>
+<li>Include:&nbsp;
+<ul>
+<li>Old associate name and email address that MiFi was assigned to&nbsp;</li>
+<li>New associate name, email address and associate number (Workday or EIN)&nbsp;</li>
+<li>IMEI from the device (typically found behind the battery)&nbsp;</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong><span style="color: #ff0000;">NOTE</span>:&nbsp;</strong><em>It may take up to two billing cycles for financial allocations to reflect this change.</em>&nbsp;</p>
+<p><em>&nbsp;</em></p>
+<p><span style="color: #0000ff;"><strong>Next Steps (employee action required)</strong></span></p>
+<p>The associate will receive separate emails via ServiceNow; one regarding their Mobile Phone eligibility, one regarding their MiFi Device/Hotspot Feature eligibility and one regarding iPad eligibility with instructions to complete their enrollment into the Mobile Services Program.&nbsp;</p>
+<p>&nbsp;</p>
+<p>The associate will need to take action, via ServiceNow, to convert their existing wireless number and mobile phone into the program, order a new line of service and a free mobile phone device on the corporate account, and/or request a MiFi device.&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="color: #0000ff;"><strong>How to reach the Mobile Services Group</strong></span>&nbsp;</p>
+<ul>
+<li><strong>Inside Ecolab:&nbsp;</strong><a href="http://inside.ecolab.com/departments/it_information-technology/mobile-services">http://inside.ecolab.com/departments/it_information-technology/mobile-services</a></li>
+<li><strong>ServiceNow:&nbsp;</strong>Create a ticket <a href="https://${mail_script:get_instance_name}.service-now.com/sp?id=sc_category&amp;sys_id=66a8e650c4f624004543d719a53bf503">https://ecolab.service-now.com/sp?id=sc_category&amp;sys_id=66a8e650c4f624004543d719a53bf503</a></li>
+<li><strong>Mobile Services Help Desk:&nbsp;</strong>Monday through Friday, 7AM to 7PM CST at 1-888-209-3733 or <a href="mailto:mobile.services@ecolab.com">mobile.services@ecolab.com</a></li>
+<li><strong>Escalations:&nbsp;</strong><a href="mailto:mobile.services@ecolab.com">mobile.services@ecolab.com</a> This mailbox is periodically monitored in the evenings, weekends, and on holidays for urgent issues.</li>
+</ul>
+<p>&nbsp;</p>
+<p>Thank you,</p>
+<p>&nbsp;</p>
+<p><span style="color: #0000ff;"><strong>ECOLAB MOBILE SERVICES GROUP</strong></span><br />HELP DESK: 7AM-7PM CST, MONDAY - FRIDAY</p>
+<p><span style="color: #0000ff;"><strong>ECOLAB&nbsp;</strong></span>655 LONE OAK DR, BLDG E/5, EAGAN, MN 55121<br /><strong><span style="color: #0000ff;">T</span>&nbsp;</strong>888 209 3733&nbsp; <strong><span style="color: #0000ff;">E</span>&nbsp;</strong><a href="mailto:mobile.services@ecolab.com">mobile.services@ecolab.com</a></p>
+<p>FOR MORE MSG INFORMATION, CLICK HERE: <span style="color: #0000ff;"><strong><a href="http://inside.ecolab.com/departments/it_information-technology/mobile-services">INSIDE ECOLAB &gt; IT &gt; MOBILE SERVICES</a></strong></span><br /><span style="color: #0000ff;"><strong>CONNECTING YOU &ndash; EVERYWHERE IT MATTERS.</strong></span></p>
+<p>&nbsp;</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>MSM-Eligibility-Request to Mgr</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>manager</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>MANAGER ACTION REQUIRED: Mobile Services Eligibility Approval Request</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-07 19:08:17</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>5285fe2adb7ae7c024e0d2e3ca961985</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>MSM-Eligibility-Request to Mgr</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+        <sys_update_name>sysevent_email_action_5285fe2adb7ae7c024e0d2e3ca961985</sys_update_name>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-07 20:28:56</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <user/>
+        <user_field/>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

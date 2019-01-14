@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="phone_approval" table="x_elin_mobile_serv_eligibility" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_approval</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Not yet requested</label>
+            <language>en</language>
+            <name>x_elin_mobile_serv_eligibility</name>
+            <sequence>100</sequence>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2018-12-28 17:26:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>d27eb65fdbaa634024e0d2e3ca9619cd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2018-12-28 17:26:52</sys_updated_on>
+            <value>not requested</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_approval</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Requested</label>
+            <language>en</language>
+            <name>x_elin_mobile_serv_eligibility</name>
+            <sequence>200</sequence>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2018-12-28 17:27:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>8edefa9fdbaa634024e0d2e3ca9619d6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2018-12-28 17:27:11</sys_updated_on>
+            <value>requested</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_approval</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Approved</label>
+            <language>en</language>
+            <name>x_elin_mobile_serv_eligibility</name>
+            <sequence>300</sequence>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2018-12-28 17:27:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>95ee765fdbaa634024e0d2e3ca961920</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2018-12-28 17:27:25</sys_updated_on>
+            <value>approved</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_approval</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Rejected</label>
+            <language>en</language>
+            <name>x_elin_mobile_serv_eligibility</name>
+            <sequence>400</sequence>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2018-12-28 17:27:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>a8fefadbdbaa634024e0d2e3ca96195d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2018-12-28 17:27:39</sys_updated_on>
+            <value>rejected</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_approval</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Opt out</label>
+            <language>en</language>
+            <name>x_elin_mobile_serv_eligibility</name>
+            <sequence>500</sequence>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2018-12-28 17:27:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>dc0ff2dfdbaa634024e0d2e3ca961983</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2018-12-28 17:27:53</sys_updated_on>
+            <value>opt out</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>phone_approval</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Terminated</label>
+            <language>en</language>
+            <name>x_elin_mobile_serv_eligibility</name>
+            <sequence>600</sequence>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2018-12-28 17:28:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>021f765fdbaa634024e0d2e3ca961931</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2018-12-28 17:28:17</sys_updated_on>
+            <value>terminated</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>phone_approval</element>
+            <name>x_elin_mobile_serv_eligibility</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2018-12-28 17:26:52</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>55ce765fdbaa634024e0d2e3ca96192b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>phone_approval</sys_name>
+            <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+            <sys_update_name>sys_choice_x_elin_mobile_serv_eligibility_phone_approval</sys_update_name>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2018-12-28 17:26:52</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

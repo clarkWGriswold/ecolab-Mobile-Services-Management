@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-02 22:43:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2a177d0ddbbe278024e0d2e3ca961912</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_elin_mobile_serv_eligibility.*.x_elin_mobile_serv.ms_eligibility_user</sys_name>
+        <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+        <sys_security_acl display_value="x_elin_mobile_serv_eligibility.*">26177d0ddbbe278024e0d2e3ca961911</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_2a177d0ddbbe278024e0d2e3ca961912</sys_update_name>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-02 22:43:06</sys_updated_on>
+        <sys_user_role display_value="x_elin_mobile_serv.eligibility.user" name="x_elin_mobile_serv.eligibility.user">17787a5bdb6a634024e0d2e3ca9619ab</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

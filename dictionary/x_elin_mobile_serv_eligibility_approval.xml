@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" label="Mobile Services Eligibility Approval" max_length="40" name="x_elin_mobile_serv_eligibility_approval" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Approval for" max_length="32" name="approval_for" reference="x_elin_mobile_serv_eligibility" type="reference"/>
+        <element label="Approval Date" max_length="40" name="approved_at" read_only="true" type="glide_date_time"/>
+        <element label="Approved via E-mail" max_length="40" name="approved_by_email" read_only="true" type="boolean"/>
+        <element label="Approver" max_length="32" name="approver" reference="sys_user" type="reference"/>
+        <element label="Comments" max_length="4000" name="comments" type="journal_input"/>
+        <element choice="1" label="Device" max_length="40" name="device" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Mobile Phone" sequence="100" value="phone"/>
+                <element inactive_on_update="false" label="iPad" sequence="200" value="tablet"/>
+                <element inactive_on_update="false" label="MiFi" sequence="300" value="mifi"/>
+                <element inactive_on_update="false" label="Wearable" sequence="300" value="wearable"/>
+                <element inactive_on_update="false" label="WWAN" sequence="300" value="wwan"/>
+            </choice>
+        </element>
+        <element label="Are you an E-Level resource (Director or above)?" max_length="40" name="e_level_resource" type="boolean"/>
+        <element label="Require communication where no landline exists?" max_length="40" name="landline" type="boolean"/>
+        <element label="None of these conditions apply" max_length="40" name="none_of_the_above" type="boolean"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Do you provide on-call, or after hours support?" max_length="40" name="oncall" type="boolean"/>
+        <element label="Override Mifi iPad" max_length="40" name="override_mifi_tablet" read_only="true" type="boolean"/>
+        <element choice="1" choice_field="phone_approval" choice_table="x_elin_mobile_serv_eligibility" label="State" max_length="40" name="state" type="choice">
+            <choice/>
+        </element>
+        <element label="&gt;50% of professional time spent out of office?" max_length="40" name="time_ooo" type="boolean"/>
+        <index name="index">
+            <element name="approver"/>
+        </index>
+        <index name="index2">
+            <element name="approval_for"/>
+        </index>
+    </element>
+</database>

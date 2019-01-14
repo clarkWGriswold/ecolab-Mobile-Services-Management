@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="allow_upgrade" label="Allow upgrade" language="en" table="x_elin_mobile_serv_eligibility">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>allow_upgrade</element>
+            <help/>
+            <hint/>
+            <label>Allow upgrade</label>
+            <language>en</language>
+            <name>x_elin_mobile_serv_eligibility</name>
+            <plural>Allow upgrades</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2018-12-28 18:22:43</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>578b8f9fdb2e634024e0d2e3ca96199a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Allow upgrade</sys_name>
+            <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+            <sys_update_name>sys_documentation_x_elin_mobile_serv_eligibility_allow_upgrade_en</sys_update_name>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2018-12-28 18:22:43</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

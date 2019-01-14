@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="requested_for" label="Requested for" language="en" table="x_elin_mobile_serv_mobile_services">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>requested_for</element>
+            <help/>
+            <hint/>
+            <label>Requested for</label>
+            <language>en</language>
+            <name>x_elin_mobile_serv_mobile_services</name>
+            <plural>Requested for</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2018-12-28 17:49:50</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>75048bd7dbea634024e0d2e3ca96199b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Requested for</sys_name>
+            <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+            <sys_update_name>sys_documentation_x_elin_mobile_serv_mobile_services_requested_for_en</sys_update_name>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2018-12-28 17:49:50</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

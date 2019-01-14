@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function actionOk() {
+
+	GlideDialogWindow.get().destroy();
+	return true; // Do run some processing script
+}
+
+function onCancel() {
+
+	GlideDialogWindow.get().destroy(); // drop the window
+	return false; // Do not run the processing script
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_elin_mobile_serv_msm_send_employee_instructions.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<g:ui_form>
+		<div style="background-color:#edf2f9; border:2px solid #34598a; padding: 15px; border-radius: 6px;">
+			<table width="100%">
+
+				<g:evaluate var="jvar_current_id" expression="RP.getWindowProperties().get('current_id')" />
+				<input type="HIDDEN" id="current_id" name="current_id" value="${RP.getWindowProperties().get('current_id')}" />
+
+				<g:evaluate var="jvar_enduser_suppressed" expression="RP.getWindowProperties().get('enduser_suppressed')" />
+				<input type="HIDDEN" id="enduser_suppressed" name="enduser_suppressed" value="${RP.getWindowProperties().get('enduser_suppressed')}" />
+
+				<g:evaluate var="jvar_phone_approval" expression="RP.getWindowProperties().get('phone_approval')" />
+				<input type="HIDDEN" id="phone_approval" name="phone_approval" value="${RP.getWindowProperties().get('phone_approval')}" />
+
+				<g:evaluate var="jvar_mifi_approval" expression="RP.getWindowProperties().get('mifi_approval')" />
+				<input type="HIDDEN" id="mifi_approval" name="mifi_approval" value="${RP.getWindowProperties().get('mifi_approval')}" />
+
+				<g:evaluate var="jvar_tablet_approval" expression="RP.getWindowProperties().get('tablet_approval')" />
+				<input type="HIDDEN" id="tablet_approval" name="tablet_approval" value="${RP.getWindowProperties().get('tablet_approval')}" />
+
+				<th style="font-size:125%">Please answer the following questions below:</th>
+				<tr id="select_row">
+					<td>
+						<div style="background-color:#edf2f9;">
+							<table>
+								<tr>
+									<td colspan="1">
+										<br />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="1">
+										<br />
+									</td>
+								</tr>
+								<tr id="select_row">
+									<td>
+										<table>
+											<tr>
+												<td height="30px" class="label" nowrap="true" align="left">
+													Enable Future E-mail Notifications to Employee?
+												</td>
+												<td height="30px" align="left">
+													<select id="enable_end_user_email" name="enable_end_user_email">
+														<option value="yes">Yes</option>
+														<option value="no">No</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="1">
+													<br />
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="30px" class="label" nowrap="true" align="left" colspan="2">
+										Please select which notification you would like to re-send:
+									</td>
+								</tr>
+								<j:if test="${jvar_phone_approval == 'approved'}">
+									<tr id="select_row">
+										<td>
+											<table>
+												<tr>
+													<td height="30px" class="label" nowrap="true" align="left">
+														Mobile Phone
+													</td>
+													<td height="30px" align="left">
+														<select id="phone_phone_email" name="phone_phone_email">
+															<option value="yes">Yes</option>
+															<option value="no">No</option>
+														</select>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</j:if>
+								<j:if test="${jvar_mifi_approval == 'approved'}">
+									<tr id="select_row">
+										<td>
+											<table>
+												<tr>
+													<td height="30px" class="label" nowrap="true" align="left">
+														MIFI Device
+													</td>
+													<td height="30px" align="left">
+														<select id="mifi_email" name="mifi_email">
+															<option value="yes">Yes</option>
+															<option value="no">No</option>
+														</select>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</j:if>
+								<j:if test="${jvar_tablet_approval == 'approved'}">
+									<tr id="select_row">
+										<td>
+											<table>
+												<tr>
+													<td height="30px" class="label" nowrap="true" align="left">
+														iPad Device
+													</td>
+													<td height="30px" align="left">
+														<select id="tablet_email" name="tablet_email">
+															<option value="yes">Yes</option>
+															<option value="no">No</option>
+														</select>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</j:if>
+							</table>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<br />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right">
+						<g:dialog_buttons_ok_cancel cancel="return onCancel();" cancel_type="button" ok="return actionOk()" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</g:ui_form>
+</j:jelly>]]></html>
+        <name>msm_send_employee_instructions</name>
+        <processing_script><![CDATA[var mailSent = [];
+
+var phoneMail = request.getParameter('phone_email');
+var mifiMail = request.getParameter('mifi_email');
+var tabletMail = request.getParameter('tablet_email');
+var userMail = request.getParameter('enable_end_user_email');
+var currentId = request.getParameter('current_id');
+
+var msmeGR = new GlideRecord('x_elin_mobile_serv_eligibility');
+
+if (msmeGR.get(currentId)) {
+
+	msmeGR.u_suppress_email = false;
+	//msmeGR.setWorkflow(false);
+	msmeGR.autoSysFields(false);
+	msmeGR.update();
+
+
+	if (userMail == 'yes') {
+
+		msmeGR.suppress_end_user_email = false;
+	}
+	else {
+
+		msmeGR.suppress_end_user_email = true;
+	}
+
+	if (phoneMail == 'yes') {
+
+		mailSent.push('Mobile Phone');
+	}
+
+	if (mifiMail == 'yes') {
+
+		mailSent.push('MIFI Device');
+	}
+
+	if (tabletMail == 'yes') {
+
+		mailSent.push('iPad Device');
+	}
+
+
+	if (phoneMail == 'yes' || mifiMail == 'yes' || tabletMail == 'yes') {
+
+		gs.eventQueue('x_elin_mobile_serv.elig_appr.approve_all', msmeGR, msmeGR.requested_for, 'force');
+	}
+
+	var deviceList = '';
+
+	for (var i = 0; i < mailSent.length; i++) {
+
+		if (i < mailSent.length - 1) {
+
+			deviceList += mailSent[i] + ', ';
+		}
+
+		if (i == mailSent.length - 1) {
+
+			deviceList += mailSent[i];
+		}
+	}
+
+	var whoAmI = gs.getUserDisplayName();
+
+	msmeGR.work_notes = whoAmI + ' has re-sent the Employee Instructions to ' + msmeGR.requested_for.getDisplayValue() + ' for the device(s) ' + deviceList + '.';
+	msmeGR.update();
+
+	gs.addInfoMessage('Employee Instructions have been re-sent for ' + deviceList + ' to ' + msmeGR.requested_for.getDisplayValue());
+
+	var urlOnStack = Packages.com.glide.sys.GlideSession.get().getStack().bottom();
+	response.sendRedirect(urlOnStack);
+}]]></processing_script>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-04 17:04:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c4c9bae9db322f8024e0d2e3ca961906</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>msm_send_employee_instructions</sys_name>
+        <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+        <sys_update_name>sys_ui_page_c4c9bae9db322f8024e0d2e3ca961906</sys_update_name>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-04 17:04:25</sys_updated_on>
+    </sys_ui_page>
+</record_update>

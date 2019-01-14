@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Notes" section_id="82e5079fdbea634024e0d2e3ca961997" sys_domain="global" table="x_elin_mobile_serv_eligibility" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>work_notes</element>
+            <position>0</position>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2019-01-03 18:39:01</sys_created_on>
+            <sys_id>74d8ca9ddbbe2780f07be3f3ca9619db</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Notes" display_value="Notes" name="x_elin_mobile_serv_eligibility" sys_domain="global" view="Default view">82e5079fdbea634024e0d2e3ca961997</sys_ui_section>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2019-01-03 18:39:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>activity.xml</element>
+            <position>1</position>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2019-01-03 18:39:01</sys_created_on>
+            <sys_id>f4d8ca9ddbbe2780f07be3f3ca9619db</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="Activities (filtered)">b832d3560a0001c700d781efe21e22f5</sys_ui_formatter>
+            <sys_ui_section caption="Notes" display_value="Notes" name="x_elin_mobile_serv_eligibility" sys_domain="global" view="Default view">82e5079fdbea634024e0d2e3ca961997</sys_ui_section>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2019-01-03 18:39:01</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>reset_workflow</element>
+            <position>2</position>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2019-01-03 18:39:01</sys_created_on>
+            <sys_id>f8d8ca9ddbbe2780f07be3f3ca9619db</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Notes" display_value="Notes" name="x_elin_mobile_serv_eligibility" sys_domain="global" view="Default view">82e5079fdbea634024e0d2e3ca961997</sys_ui_section>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2019-01-03 18:39:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>notify_suppressed_user</element>
+            <position>3</position>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2019-01-03 18:39:01</sys_created_on>
+            <sys_id>7cd8ca9ddbbe2780f07be3f3ca9619db</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Notes" display_value="Notes" name="x_elin_mobile_serv_eligibility" sys_domain="global" view="Default view">82e5079fdbea634024e0d2e3ca961997</sys_ui_section>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2019-01-03 18:39:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Notes</caption>
+            <header>false</header>
+            <name>x_elin_mobile_serv_eligibility</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2018-12-28 17:58:03</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>82e5079fdbea634024e0d2e3ca961997</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Notes</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+            <sys_update_name>sys_ui_section_82e5079fdbea634024e0d2e3ca961997</sys_update_name>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2018-12-28 17:58:03</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="x_elin_mobile_serv_eligibility" relationship="" sys_domain="global" table="x_elin_mobile_serv_eligibility_approval" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>approval_for</element>
+            <list_id display_value="x_elin_mobile_serv_eligibility_approval" element="NULL" name="x_elin_mobile_serv_eligibility_approval" parent="x_elin_mobile_serv_eligibility" relationship="NULL" sys_domain="global" view="Default view">05f90e51dbfe2780f07be3f3ca961900</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2019-01-03 18:43:57</sys_created_on>
+            <sys_id>c1f90e51dbfe2780f07be3f3ca96190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2019-01-03 18:43:57</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>device</element>
+            <list_id display_value="x_elin_mobile_serv_eligibility_approval" element="NULL" name="x_elin_mobile_serv_eligibility_approval" parent="x_elin_mobile_serv_eligibility" relationship="NULL" sys_domain="global" view="Default view">05f90e51dbfe2780f07be3f3ca961900</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2019-01-03 18:43:57</sys_created_on>
+            <sys_id>45f90e51dbfe2780f07be3f3ca96190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2019-01-03 18:43:57</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>state</element>
+            <list_id display_value="x_elin_mobile_serv_eligibility_approval" element="NULL" name="x_elin_mobile_serv_eligibility_approval" parent="x_elin_mobile_serv_eligibility" relationship="NULL" sys_domain="global" view="Default view">05f90e51dbfe2780f07be3f3ca961900</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2019-01-03 18:43:57</sys_created_on>
+            <sys_id>c5f90e51dbfe2780f07be3f3ca96190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2019-01-03 18:43:57</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>approver</element>
+            <list_id display_value="x_elin_mobile_serv_eligibility_approval" element="NULL" name="x_elin_mobile_serv_eligibility_approval" parent="x_elin_mobile_serv_eligibility" relationship="NULL" sys_domain="global" view="Default view">05f90e51dbfe2780f07be3f3ca961900</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2019-01-03 18:43:57</sys_created_on>
+            <sys_id>49f90e51dbfe2780f07be3f3ca96190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2019-01-03 18:43:57</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_on</element>
+            <list_id display_value="x_elin_mobile_serv_eligibility_approval" element="NULL" name="x_elin_mobile_serv_eligibility_approval" parent="x_elin_mobile_serv_eligibility" relationship="NULL" sys_domain="global" view="Default view">05f90e51dbfe2780f07be3f3ca961900</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2019-01-03 18:43:57</sys_created_on>
+            <sys_id>c9f90e51dbfe2780f07be3f3ca96190d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2019-01-03 18:43:57</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_elin_mobile_serv_eligibility_approval</name>
+            <parent>x_elin_mobile_serv_eligibility</parent>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>CISNEJA</sys_created_by>
+            <sys_created_on>2019-01-03 18:43:57</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>05f90e51dbfe2780f07be3f3ca961900</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_elin_mobile_serv_eligibility_approval</sys_name>
+            <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+            <sys_update_name>sys_ui_list_x_elin_mobile_serv_eligibility_approval_x_elin_mobile_serv_eligibility_null</sys_update_name>
+            <sys_updated_by>CISNEJA</sys_updated_by>
+            <sys_updated_on>2019-01-03 18:43:57</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

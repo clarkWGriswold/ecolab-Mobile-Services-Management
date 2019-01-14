@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_elin_mobile_serv_eligibility</collection>
+        <condition table="x_elin_mobile_serv_eligibility">suppress_end_user_email!=true^EQ<item endquery="false" field="suppress_end_user_email" goto="false" newquery="false" operator="!=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <event_name>x_elin_mobile_serv.elig_appr.complete</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <group/>
+        <group_field/>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <list/>
+        <list_field/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p><strong>ASSOCIATE NAME =&nbsp;${requested_for}</strong>&nbsp;</p>
+<p><strong>ASSOCIATE WORKDAY ID =&nbsp;${requested_for.u_workday_id}</strong>&nbsp;</p>
+<p><strong>ASSOCIATE EMAIL ADDRESS =&nbsp;${requested_for.email}</strong>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="color: #0000ff; font-size: 12pt;"><strong>Welcome to the Mobile Services Program!</strong></span></p>
+<p><strong>Your manager has set your approved options for the Program to the following:</strong>&nbsp;</p>
+<p>Mobile Phone Approval: ${phone_approval}</p>
+<p>IPad Approval: ${tablet_approval}</p>
+<p>MiFi Approval: ${mifi_approval}</p>
+<p>&nbsp;</p>
+<p><span style="color: #0000ff;"><strong>Information, Expectations, and Best Practices</strong></span></p>
+<p>Please visit the Mobile Services page on Inside Ecolab before enrolling in the program for information on your options regarding devices and program types.&nbsp; It is your responsibility to understand the Mobile Services Program&rsquo;s requirements and obligations prior to joining the Program.&nbsp; Please contact us at <a title="mobile.services@ecolab.com" href="maitto:mobile.services@ecolab.com">mobile.services@ecolab.com</a> or call us at 1-888-209-3733 Monday-Friday 7AM to 7PM CST or Saturday 8AM to 4PM CST for any questions regarding the Mobile Services Program.</p>
+<p>Expectations include, but are not limited to, the following.</p>
+<ul style="list-style-position: inside;">
+<li>The Ecolab Mobile Services Program utilizes a shared/pooled data environment.&nbsp; Data is NOT unlimited.&nbsp; Reasonable and prudent use of Ecolab mobile service plans for personal use is permitted.</li>
+<li>Ecolab does not support streaming movies or music with corporate-paid lines of service for non-business-related purposes.&nbsp; Note that 1 hour of HD video streaming consumes up to 6GB of data.</li>
+</ul>
+<p><span style="color: #0000ff;"><strong>How to Enroll in the Mobile Services Program</strong></span></p>
+<ul style="list-style-position: inside;">
+<li>Go to the Inside IT Help Center &gt; Products &amp; Services &gt; Place an Order.</li>
+<li>Select the form relating to the device or service you wish to order.</li>
+<li>Complete the form and submit.</li>
+</ul>
+<p>It is our goal to ensure that your mobile experience is a positive one.</p>
+<p>&nbsp;</p>
+<p>Thank you,&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong><span style="color: #0000ff;">ECOLAB MOBILE SERVICES GROUP</span></strong><br />HELP DESK: 7AM-7PM CST, MONDAY - FRIDAY and 8AM-4PM CST, SATURDAY</p>
+<p><strong><span style="color: #0000ff;">ECOLAB</span></strong>&nbsp;655 LONE OAK DRIVE, E5, EAGAN, MN 55121<br /><span style="color: #0000ff;">T</span>&nbsp;888 209 3733&nbsp;&nbsp;<span style="color: #0000ff;">E</span>&nbsp;<a href="mailto:mobile.services@ecolab.com">mobile.services@ecolab.com</a></p>
+<p>FOR MORE MSG INFORMATION, CLICK HERE: <span style="color: #0000ff;"><strong><a href="http://inside.ecolab.com/departments/it_information-technology/mobile-services">INSIDE ECOLAB &gt; IT &gt; MOBILE SERVICES</a></strong></span><br /><span style="color: #0000ff;"><strong>CONNECTING YOU &ndash; EVERYWHERE IT MATTERS.</strong></span></p>
+<p>&nbsp;</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>MSM-Eligibility-Approvals Complete</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>requested_for</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>ACTION REQUIRED: Enroll in Mobile Services Program</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>CISNEJA</sys_created_by>
+        <sys_created_on>2019-01-07 19:02:23</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>ffa37ea2db7ae7c024e0d2e3ca961970</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>MSM-Eligibility-Approvals Complete</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mobile Services Management" source="x_elin_mobile_serv">6bb37613db6a634024e0d2e3ca961919</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Mobile Services Management">6bb37613db6a634024e0d2e3ca961919</sys_scope>
+        <sys_update_name>sysevent_email_action_ffa37ea2db7ae7c024e0d2e3ca961970</sys_update_name>
+        <sys_updated_by>CISNEJA</sys_updated_by>
+        <sys_updated_on>2019-01-07 20:27:24</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <user/>
+        <user_field/>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>
